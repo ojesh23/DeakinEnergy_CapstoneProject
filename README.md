@@ -1,15 +1,4 @@
-# DeakinEnergy SIT782 and SIT764  
-
-## Branching (In case of any doubts, contact Pradeep/Wellia/Seniors)
-There are 2 main branches in the repository. 
-- master 
-- developer
-
-master branch is the one that will be live on Azure/hosting platform. No changes should be pushed/committed to master directly.
-developer branch is to be used for making any changes. Any new branch needs to be forked/created from developer branch.
-
-When your changes are complete, then create a Pull Request to merge those changes to master branch. Add code/change-set reviewers as appropriate. 
-After the Pull request has been accepted by the reviewers, changes will be merged into master and a new deployment can be triggerred to deploy those changes to Azure/hosting platform.
+# DeakinEnergy Capstone Project  
 
 ## Steps to get started 
 - Clone the repository using the link from Bitbucket
