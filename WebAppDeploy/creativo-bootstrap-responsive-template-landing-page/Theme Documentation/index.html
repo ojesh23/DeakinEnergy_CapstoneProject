@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Creativo - Bootstrap Responsive Template</title>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="assets/scripts/jquery.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-ui.custom.min.js"></script>
+
+    <script type="text/javascript" src="assets/scripts/shCore.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushXml.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/blueprint-css/shCoreDefault.css" />
+
+    <!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                // Cache selectors
+                var lastId,
+                    topMenu = $(".menu .visible"),
+                    topMenuHeight = topMenu.outerHeight() + 15,
+                    // All list items
+                    menuItems = topMenu.find("a"),
+                    canUpdateURL = typeof history.pushState === "function" ? true : false,
+                    // Anchors corresponding to menu items
+                    scrollItems = menuItems.map(function () {
+                        var item = $($(this).attr("href"));
+                        if (item.length) {
+                            return item;
+                        }
+                    });
+
+                // Bind click handler to menu items
+                // so we can get a fancy scroll animation
+                menuItems.click(function (e) {
+                    var href = $(this).attr("href"),
+                        offsetTop = $(href).offset().top - topMenuHeight + 1;
+
+                    $('html, body').stop().animate({
+                        scrollTop: offsetTop
+                    }, 300);
+                    e.preventDefault();
+                });
+
+                // Bind to scroll
+                $(window).scroll(function () {
+                    // Get container scroll position
+                    var fromTop = $(this).scrollTop() + topMenuHeight;
+
+                    // Get id of current scroll item
+                    var cur = scrollItems.map(function () {
+                        if ($(this).offset().top < fromTop)
+                            return this;
+                    });
+                    // Get the id of the current element
+                    cur = cur[cur.length - 1];
+                    var id = cur && cur.length ? cur[0].id : "";
+
+                    if (lastId !== id) {
+                        lastId = id;
+                        // Set/remove active class
+                        menuItems
+                            .parents('li').removeClass("active").end()
+                            .filter("[href=#" + id + "]").parent('li').addClass("active")
+                            .parents('li').addClass('active');
+
+                        if (canUpdateURL) {
+                            history.pushState(null, null, window.location.href.split('#').shift() + '#' + id);
+                        } else {
+                            var $section = $('#' + id);
+
+                            $section.attr('id', '');
+                            window.location.hash = '#' + id;
+                            $section.attr('id', id);
+                        }
+                    }
+                });
+
+                hashname = window.location.hash.replace('#', '');
+
+                $('.menu li').removeClass('active');
+                $('.menu li a[href=#' + hashname + ']')
+                    .parent('li').addClass('active')
+                    .parents('li').addClass('active');
+
+                elem = $('#' + hashname);
+
+                if (hashname.length > 1) {
+                    $('body, html').animate({
+                        scrollTop: $(elem).offset().top - topMenuHeight - 315
+                    }, 500, 'easeInOutCubic');
+                };
+            })
+        })(jQuery);
+    </script>
+</head>
+
+
+<body>
+    <div class="docs-header-bg">
+        <div class="docs-header">
+            <h1 class="center">Creativo - Bootstrap Responsive Template Documentation</h1>
+            <p>A Complete Guide of Creativo - Bootstrap Responsive Template - Document Version 1.1</p>
+            <div>
+                <a href="#" target="_blank" class="header-button">Support</a>
+                <a href="#" target="_blank" class="header-button">Item Page</a>
+                <a href="#" target="_blank" class="header-button">Live Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!--  Section -->
+        <!-- 		<h2 id="toc" class="alt">Table of Contents</h2> -->
+        <div class="menu">
+            <ol class="visible">
+                <li><a href="#information">General Info</a>
+                    <ol>
+                        <li><a href="#folder-struc">Folder Structure</a>
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="#how-to">How To?</a>
+                    <ol>
+                        <li><a href="#main-header">Main Header</a></li> 
+                    </ol>
+                </li>
+                <li><a href="#html">Code</a>
+                    <ol>
+                        <li><a href="#html">HTML</a>
+                        </li>
+                        <li><a href="#css">CSS</a>
+                        </li>
+                        <li><a href="#java">JavaScript</a>
+                        </li>
+                    </ol>
+                </li>
+
+                <li><a href="#elements">Elements</a>
+                    <ol>
+                        <li><a href="#font-awesome">Font Awesome Icon</a></li>   
+                    </ol>
+                </li>
+
+                <li><a href="#credits">Credits</a>
+                </li>
+            </ol>
+        </div>
+
+        <h3 id="information"><strong>General Informations</strong> - <a href="#information">top</a></h3>
+
+        <p>First of all, we want to say <strong>thanks you!</strong> We are very grateful that you have chosen our Creativo one page site for your langding page website. We will do everything we can to provide you the best support possible. Feel free asking us if you need more help.</p>
+
+        <p>This document covers the Creativo - Bootstrap Responsive Template structure, set up, and use of this template and provides answers and solutions to common problems and issues - we encourage you to read this document thoroughly if you experience any difficulties. If you have any questions that are beyond the scope of this document, feel free to ask support. (<a href="#" target="_blank">Support</a>)</p>
+
+
+        <hr>
+
+        <div class="subitems">
+
+            <h5 id="folder-struc"><strong>Folder Structure</strong> - <a href="#information">top</a></h5>
+            <ul class="folder-struc">
+                <li class="file folder">Creativo</li>               
+            </ul>
+
+            <ul class="folder-struc margin-left">                
+                <li class="file folder">assets
+                    <ul class="folder-struc margin-left">
+                        <li class="file folder">css</li>
+                        <li class="file folder">font
+                            <ul class="folder-struc margin-left">
+                                <li class="file folder">fonts</li>
+                                <li class="file folder">css</li>
+                            </ul>
+                        </li>
+                        <li class="file folder">img</li>
+                        <li class="file folder">js</li>
+                    </ul>
+                </li>  
+                
+                 <li class="file page">index.html</li>
+                 <li class="file page">index2.html</li>
+                 <li class="file page">index3.html</li>
+                 <li class="file page">index4.html</li>
+            </ul>
+
+            <hr>
+
+            <!--      Section       -->
+
+            <h3 id="how-to"><strong>How To?</strong> - <a href="#information">top</a></h3>
+			
+			<h6 id="main-header">How to Customize Main Header?</h6>
+            <ul class="folder-struc">
+                <li class="file page">index.html</li>
+            </ul>
+            <pre class="code-box">
+
+ 
+   &lt;!-- START HEARDER SECTION --&gt;
+    &lt;header id="home" class="header"&gt;
+        &lt;div class="container"&gt; 
+        &lt;div class="row"&gt;
+            &lt;div class="col-sm-12 text-center"&gt;
+                &lt;div class="header-text"&gt;
+                    &lt;h1&gt;Creativo Bootstrap Theme&lt;/h1&gt;
+                    &lt;p&gt;High Quality Theme&lt;/p&gt;  
+                    &lt;a href="#welcome" class="page-scroll ank"&gt;&lt;i class="fa fa-angle-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;	      
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+			</pre>
+
+			<hr />
+</pre>
+
+<hr>
+
+            <h3 id="html"><strong>HTML Structure</strong> - <a href="#information">top</a></h3>
+
+            <div class="narrow-p">
+
+                <p>The template is build on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.3.6</a> the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web..</p>
+
+                <p>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</p>
+
+                <p>Create a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding, then create .row and add columns with appropriate device name (xs, sm, md, lg) and grid number (2, 4, 6, 12).</p>
+
+                <p>For full documentation, please visit Bootstrap 3 site: <a href="http://getbootstrap.com/css" target="_blank">http://getbootstrap.com/css/</a>
+                </p>
+                <ul class="folder-struc">
+                    <li class="file page">css/bootstrap.css</li>
+                </ul>
+
+                <pre class="code-box">
+&lt;!-- Bootstrap --&gt;
+&lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;/head&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;col-lg-6&quot;&gt;
+			...
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-lg-6&quot;&gt;
+			...
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            </div>
+
+            <hr>
+            <!-- HTML -->
+
+            <!-- CSS -->
+            <h3 id="css"><strong>CSS Structure</strong> - <a href="#information">top</a></h3>
+
+            <div class="narrow-p">
+
+                <p>CSS folder and files struture Well organized.
+                    <br>These are the CSS file you're be using in the template:</p>
+
+                <ul class="folder-struc">
+                    <li class="file folder">css</li>
+                </ul>
+
+                <pre class="code-box">
+bootstrap.css (Bootstrap Original file of 3.3.6 Don't touch this file)
+style.css (All custom elements in this file)
+	</pre>
+
+            </div>
+
+            <hr>
+            <!-- CSS -->
+
+
+            <!-- Java Script -->
+            <h3 id="java"><strong>Java Script</strong> - <a href="#information">top</a></h3>
+
+            <div class="narrow-p">
+
+                <p>jQuery - is a Javascript library that greatly reduces the amount of code that you must write. For more information, please visit http://www.jquery.com/</p>
+
+                <p>The initialization of the elements, libs and features is made by the file scripts.js, in the js folder. Take a look at the "build" function to see what it does.</p>
+
+                <ul class="folder-struc">
+                    <li class="file page">js/jquery.js</li>
+                </ul>
+
+                <pre class="code-box">
+&lt;!-- Custom Functions --&gt;
+&lt;script src=&quot;assets/js/custom.js&quot; typr=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+	</pre>
+
+            </div>
+
+            <hr>
+            <!-- Java Script -->
+
+
+
+
+
+
+
+            <hr>
+            <!-- Elements -->
+
+
+
+            <!-- Icons -->
+            <h3 id="font-awesome"><strong>Font Awesome Icon</strong> - <a href="#information">top</a></h3>
+
+            <div class="narrow-p">
+
+                <p>In Creativo - Bootstrap Responsive Template we used FontAwesome icons. Which is more user friendly and 350+ icons avaiable.</p>
+
+                <span class="notice-box">You can find all icon classes here : <a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">FontAwesome</a>.</span>
+
+                <p>Use of icons :</p>
+                <pre class="code-box">
+&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;i&gt;		
+&lt;i class=&quot;fa fa-code&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-globe&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-diamond&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-database&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-crop&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-html5&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-explorer&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-link&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;i&gt;
+&lt;i class=&quot;fa-facebook&quot;&gt;&lt;i&gt;	
+&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;i&gt;	
+&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;i&gt;	
+&lt;i class=&quot;fa fa-pinterest&quot;&gt;&lt;i&gt;	
+&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;i&gt;	
+&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;i&gt;	
+</pre>
+
+            </div>
+            
+            <hr>
+            
+            
+            <!-- Credits -->
+            <h5 id="credits"><strong>Sources and Credits</strong> - <a href="#information">top</a></h5>
+
+           <div class="narrow-p">
+
+            <b>I've used the following plugins as listed.</b>
+
+            <ul>
+                <li><a href="https://jquery.com/">jQuery</a></li>
+                <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                <li><a href="https://github.com/feimosi/baguetteBox.js">Baguette Box</a></li>
+				<li><a href="http://yiotis.net/filterizr/">filterizr</a></li>
+                <li><a href="http://formsubmit.io">formsubmit</a></li>
+            </ul>
+
+            <hr class="space">
+
+          
+        <p><strong>Images:</strong></p>
+
+        <ul>
+        	<li><a href="http://graphicburger.com/">graphicburger</a></li>
+            <li><a href="https://pixabay.com/">pixabay</a></li>
+            <li><a href="http://www.bigstockphoto.com/image-91674524/stock-photo-success-concept-collage-with-many-business-people-portraits">bigstockphoto</a></li>            
+        </ul>
+               
+         <p><strong>Free fonts:</strong></p>
+
+        <ul>
+        	<li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a></li>
+            <li><a href="https://fonts.google.com/specimen/Quicksand">Quicksand</a></li>
+        </ul>
+
+        <hr class="space">
+
+        <p>All images have been used for demonstration purposes only and are not included in the template.</p>
+
+        <hr class="space">
+
+        <!-- Credits -->
+
+        <p>Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating this template. No guarantees, but I'll do my best to assist. If you have any suggestions on how to improve our templates or documentation please share them!</p>
+
+        <hr class="space">
+
+        </div>
+
+
+    </div>
+    <!-- end div .container -->
+
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Energy Safe Victoria</title>
+    <!-- Standard -->
+    <link rel="shortcut icon" href="assets/img/ficon.png">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- latest fonts awesome -->
+    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/baseStyle.css" type="text/css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <!--  baguetteBox -->
+    <link rel="stylesheet" href="assets/css/baguetteBox.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://p.trellocdn.com/embed.min.js"></script>
+        <script>
+		var teamFile = "assets/json/t1-2021-team.json";
+		var teamDOM = "";
+    	$(document).ready(function(){
+        $.getJSON(teamFile,function(data){
+            console.log("Team-members :"+data.team);
+
+            $.each(data.team,function(count,item){
+                if( item.img.match(/\.(jpe?g|png|gif)$/) ) {
+
+                    teamDOM = teamDOM + '<div class="col-md-3"><div class="team-post"><img src='+ item.img +'><ul class="team-social"><li><a class="linkedin" target="_blank" href='+item.linkedin+'><i class="fa fa-linkedin"></i></a></li></ul><div class="team-content"><h2>'+item.name+'</h2><span>'+item.position+'</span></div></div></div>';
+                    if(count%3 == 0 && count >= 10){
+                        teamDOM = '<div class="container"><div class="row">'+teamDOM+'</div></div>';
+                         $('#team-section').append(teamDOM);
+                        teamDOM = '';
+                    }
+                    if(((data.team.length-1) == count) && teamDOM.length > 0){
+                     teamDOM = '<div class="container"><div class="row">'+teamDOM+'</div></div>';
+                      $('#team-section').append(teamDOM);
+                        teamDOM = '';
+                    }
+                }
+            });
+        });
+
+	});
+	</script>
+</head>
+<!--  nav  -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<!--    <div class="container">-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+           <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+            <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"/>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left" style="font-size:small;">
+                <li>
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#productPipeline">Product Pipeline</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Data Exploration<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="nav-link" href="#exploration">Exploration</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#visualization">Visualization</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Data Analysis<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="nav-link" href="#incident_inspec">Incident Inspections</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#profilingNc">Profiling Non-Compliant Cases</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#hypothesis_diagram">Non-Compliant Hypothesis Tests</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#recommendation">Next Year Inspections</a>
+                        </li>
+                    </ul>
+                </li>
+
+<!--                <li>-->
+<!--                    <a class="nav-link" href="#classifiers"> Classification Models </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="nav-link" href="#contactIncidents">Contact Incidents</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="nav-link" href="#groundFire">Ground Fire</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="nav-link" href="#injuries">Injuries</a>-->
+<!--                </li>-->
+                <li>
+                    <a class="nav-link" href="#services">Tools & Technologies</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#team-section">Our Team</a>
+                </li>
+<!--                <li>-->
+<!--                    <a class="nav-link" href="#AddIncident">Incident</a>-->
+<!--                </li>-->
+            </ul>
+
+        </div>
+        <!-- navbar-collapse  -->
+<!--    </div>-->
+</nav>
+<body>
+
+<!--{#{% extends "data_analysis.html" %}#}-->
+
+{% include "intro.html" %}
+
+{% include "aboutUs.html" %}
+
+{% include "product_pipeline.html" %}
+
+{% include "data_exploration.html" %}
+
+{% include "incident_inspection.html" %}
+
+{% include "data_analysis.html" %}
+
+{% include "conclusion.html" %}
+
+</body>
+
+<!-- Copyrights -->
+<footer class="footer-distributed">
+        <div class="footer-center>
+
+            <p class="footer-company-name">© 2021 Energy Safe Victoria</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>&nbsp;<span> 309 - Energy Safe Victoria Head Office
+                 Level 5/4 Riverside Quay, Southbank VIC 3006</span>
+
+            </div>
+            <div>
+					<i class="fa fa-phone"></i>&nbsp;<span> (03) 9203 9700</span>
+
+
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>&nbsp;<a href="mailto:support@energysafe.com">support@energysafe.com</a>
+				</div>
+			</div>
+				</div>
+			</div>
+		</footer>
+  <!-- End -->
+</html>

@@ -1,0 +1,552 @@
+<!doctype html>
+<title>Deakin Energy</title>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<a class="weatherwidget-io" href="https://forecast7.com/en/n37d47144d79/victoria/" data-label_1="VICTORIA" data-label_2="WEATHER" data-font="Georgia" data-icons="Climacons Animated" data-theme="marine" >VICTORIA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+</head>
+<style>
+   body {
+   font-family: 'Poppins', sans-serif;
+   }
+   
+   .header {
+   background: #35477d;
+   padding: 20px;
+   border-bottom: 1px solid #35477d;
+   font-size: 25px !important;
+   color: #fff;
+   text-align: center;
+   font-weight: normal;
+   }
+   
+   p {
+   line-height: 26px;
+   }
+   
+   .headingt {
+   position: relative;
+   margin: 0 0 20px;
+   color: #181f4e;
+   padding-bottom: 5px;
+   font-weight: 600;
+   font-size: 26px;
+   line-height: 28px;
+   /* padding-left: 20px; */
+   padding-top: 20px;
+   padding-bottom: 6px;
+   }
+   
+   .headingt:before {
+   content: " ";
+   position: absolute;
+   left: 40;
+   bottom: -2px;
+   width: 90px;
+   height: 3px;
+   
+   }
+   
+   .logo {
+   text-transform: uppercase;
+   margin: 0px;
+   }
+   
+   .footer {
+   background: #35477d;
+   padding: 10px;
+   border-bottom: 1px solid #35477d;
+   color: #fff;
+   text-align: center;
+   font-weight: 500;
+   }
+   
+   footer p {
+   margin-bottom: 0px;
+   }
+   
+   .body-main {
+   background: #ffffff;
+   box-shadow: -50px 0px 100px -80px #000000, 50px 0px 100px -80px #000000;
+   }
+   
+   .btn,
+   .form-control {
+   border-radius: 0px;
+   }
+   
+   .tab-content {
+   border: 1px solid #e6e4e4;
+   padding: 10px;
+   margin-bottom: 20px;
+   }
+   
+   ul.nav-tabs {
+   border: 0px;
+   }
+   
+   .nav-tabs>li.active>a,
+   .nav-tabs>li.active>a:focus,
+   .nav-tabs>li.active>a:hover {
+   background: #35477d ;
+   
+   color: #fff;
+   }
+   
+   ul.nav-tabs li a,
+   .nav>li>a:focus,
+   .nav>li>a:hover {
+   background: #D81B60;
+   color: #fff;
+   }
+   
+   .border {
+   border-width: 1px;
+   border-color: lightgrey;
+   border-style: solid;
+   }
+
+   .svg-parent {
+      display: block;
+      margin: 0 auto;
+   }
+   
+   .special{
+     display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid #35477d;
+  }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body onload="option_retainer()">
+   <section>
+      <header>
+         <div class="container-fluid header">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col=lg-12">
+                  <h1 class="logo"> Australia Electricity Demand Prediction </h1>
+               </div>
+            </div>
+         </div>
+      </header>
+   </section>
+   <section>
+      <div class="container-fluid body-main" style="min-height: 450px">
+      
+      <ul class="nav nav-tabs">
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+            
+			<li><a id="weekly_li" data-toggle="tab" href="#weekly">Weekly Demand</a></li>
+            <li><a id="monthly_li" data-toggle="tab" href="#yearlytrends">Yearly Trend</a></li>
+            <li><a id="festival_li" data-toggle="tab" href="#festival">Public Holiday Demands</a></li>
+            <li><a data-toggle="tab" href="#algorithms">Algorithms</a></li>
+            <li><a data-toggle="tab" href="#live">Live Demand</a></li>
+         </ul>
+      </ul>
+      <div class="tab-content">
+         <div id="home" class="tab-pane fade in active">
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col=lg-12">
+		   <p>
+            <h3 class="headingt">Prediction of Demand</h3>
+			<p>We are predicting demand of each state with respect to month.Using 4 algoritms which will help us in prediction of demand.You can download the dataset from AEMO website,use it under upload and get prediction or else you choose the data from the existing files
+            </p></p>
+         
+                  <h3 class="headingt">Upload new input file</h3>
+                  <!-- {% with messages = get_flashed_messages() %}
+                     {% if messages %}
+                     <ul class=flashes>
+                     {% for message in messages %}
+                      <li>{{ message }}</li>
+                     {% endfor %}
+                     </ul>
+                     {% endif %}
+                     {% endwith %} -->
+               </div>
+               <form method="post" action="/" enctype="multipart/form-data">
+                  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                     <input type="file" name="files[]" multiple="true" autocomplete="off" required
+                        class="form-control">
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                     <input type="submit" value="Upload" class="btn btn-success">
+                  </div>
+               </form>
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom:30px;">
+               <form action="/forecast" method="POST" enctype="multipart/form-data">
+                  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                     <div class="form-group">
+                        <label>select any one uploaded file</label>
+                        <select id="filelist" name='flist' class="form-control">
+                           <option value="default" selected>Please select any one uploaded file</option>
+                           {% for file in filenames %}
+                           <option value="{{file}}">{{file}}</option>
+                           {% endfor %}
+                        </select>
+                        <p> {% if error %}
+                        <p style="color:#FF0000" ;> Please select an input file from dropdown to process
+                        </p>
+                        {% endif %}
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                     <div class="form-group">
+                        <label>Select Algorithm</label>
+                        <select id="algolist" name='alist' class="form-control">
+                           <option id="LSTM" value="LSTM" selected> LSTM </option>
+                           <option id="GB" value="Gradient_Booster"> Gradient Booster </option>
+                           <option id="DT" value="Decision_Tree"> Decision Tree </option>
+                           <option id="SVM" value="SVM"> SVM </option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                     <input type="submit" value="Train and Forecast" class="btn btn-success"
+                        style="margin-top:25px;">
+                  </div>
+               </form>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col=lg-12">
+                  {% if selected_algorithm > " " %}
+                  <h3 class="headingt"> Algorithm : {{selected_algorithm}}</h3>
+                  {% endif %}
+                  {%if line_chart %}
+                  <embed type="image/svg+xml" src='{{line_chart|safe}}' style='max-width:750px' />
+                  {% endif %}
+                  {% if selected_algorithm > " " %}
+                  <h3 class="headingt">
+                  Root Mean Square Error value : {{RMSE}}
+				  <h3>
+				  <h3 class="headingt">
+				  Algorithm Execution time: {{ExecutionTime}}
+			      <h3>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+         <div id="predictions" class="tab-pane fade">
+            <div class="col-xs-12 col-sm-12 col-md-6 col=lg-12">
+               {% if selected_algorithm > " " %}
+               <h3 class="headingt"> Algorithm : {{selected_algorithm}}</h3>
+               {% endif %}
+               {%if line_chart %}
+               <embed type="image/svg+xml" src='{{line_chart|safe}}' style='max-width:750px' />
+               {% endif %}
+               {% if selected_algorithm > " " %}
+               <h3 class="headingt">
+               Root Mean Square Error value : {{RMSE}}
+			   <h3>
+			   <h3 class="headingt">
+			   Algorithm Execution time: {{ExecutionTime}}
+			   <h3>
+               {% endif %}
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col=lg-12">
+               {% if selected_algorithm > " " %}
+               <h3 class="headingt"> Algorithm : {{selected_algorithm}}</h3>
+               {% endif %}
+               {%if line_chart %}
+               <embed type="image/svg+xml" src='{{line_chart|safe}}' style='max-width:750px' />
+               {% endif %}
+               {% if selected_algorithm > " " %}
+               <h3 class="headingt">
+               Root Mean Square Error value : {{RMSE}}
+			  <h3>
+			  <h3 class="headingt">
+			  Algorithm Execution time : {{ExecutionTime}}
+			  <h3>
+               {% endif %}
+            </div>
+         </div>
+         <div id="yearlytrends" class="tab-pane fade">
+            <h3 class="headingt">Month-wise Yearly Trends since 2000</h3>
+            <p>Select a month and a state from the drop down menus</p>
+            <form action="/monthly" method="POST" enctype="multipart/form-data">
+               <div class="col-md-12">
+                  <div class="form-group col-md-3">
+                     <label>Select Month</label>
+                     <select id="month" name='month' class="form-control">
+                        <option value="01">January</option>
+                        <option value="02">Febuary</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                     </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                     <label>Select State</label>
+                     <select id="mstate" name='mstate' class="form-control">
+                        <option id="VIC1" value="VIC1"> VICTORIA</option>
+                        <option id="NSW1" value="NSW1"> NEW SOUTH WALES </option>
+                        <option id="SA1" value="SA1"> SOUTH AUSTRALIA </option>
+                        <option id="TAS1" value="TAS1"> TASMANIA </option>
+                        <option id="QLD1" value="QLD1"> QUEENSLAND </option>
+                     </select>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                     <input type="submit" value="Submit" class="btn btn-success" style="margin-top:25px"; ></div>
+               </div>
+            </form>
+			<form method="post" action="/showall">
+				<input type="submit" value="Show just for Victoria" name="showall" class="btn btn-success"/>
+			</form>
+			
+			
+			
+         {%if monthly_image %}
+            <div class="svg-parent">
+               <embed width="60%" height="50%" type="image/svg+xml" src= '{{ monthly_image|safe }}' class="special"/>
+            </div>
+			{% endif %}
+         </div>
+		 <div id="weekly" class="tab-pane fade">
+			<h3 class="headingt">Weekly Trends for March 2019</h3>
+			<img src="../static/images/weekly.png" style='width:65%'>
+			<p>Australia’s energy consumption is used mainly for electricity generation, transportation and manufacturing. These industries operate on weekdays and weekends on different parts of Australia. However, on weekends the same works on different intervals for instance in transportation industry,  
+			the PTV’s have different schedules on weekdays compared to weekends because majority of the people have no work on weekends. 
+			The same is through with the manufacturing and electricity generation industries where most of the employees have no work 
+			on weekends. </p>
+		 </div>
+         <div id="festival" class="tab-pane fade">
+            <h3 class="headingt">Consumption of demand on public holidays</h3>
+            <p>Select a year and a public holiday from the drop down menus</p>
+            <form action="/festival" method="POST" enctype="multipart/form-data">
+               <div class="col-md-12">
+                  <div class="form-group col-md-3">
+                     <label>Select Year</label>
+                     <select id="fyear" name='fyear' class="form-control">
+                     </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                     <label>Select Public Holiday</label>
+                     <select id="festival_select" name='festival' class="form-control">
+                        <option id="Christmas" value="Christmas"> Christmas</option>
+                        <option id="Australia Day" value="Australia Day"> Australia Day </option>
+                        <option id="Easter" value="Easter"> Easter </option>
+                        <option id="New Year" value="New Year"> New Year </option>
+                        <option id="Good Friday" value="Good Friday"> Good Friday </option>
+                        <option id="Anzac Day" value="Anzac Day"> Anzac Day </option>
+                     </select>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+                     <input type="submit" value="Submit" class="btn btn-success" style="margin-top:24px;">
+
+                     
+                  </div>
+               </div>
+            </form>
+            {%if festival_image %}
+            <p>Trends show that the energy demand on a public holiday was lower than the day before
+               and the day after. As most of the industries and offices don't operate on public holidays.
+            </p>
+            <embed width="50%" height="50%" type="image/svg+xml" src= '{{ festival_image|safe }}' class="special" />
+            {% endif %}
+         </div>
+         <div id="algorithms" class="tab-pane fade">
+            <h1>CONTEXT</h1>
+            <p>Comparision of individual performance of Algorithms across different datasets</p>
+           <table>
+  <tr>
+    <th>Algorithm</th>
+    <th>Energy Dataset size</th>
+    <th>RMSE value</th>
+    <th>Execution Time</th>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td>3 months</td>
+    <td>0.0481</td>
+     <td>9.25 seconds</td>
+    
+  </tr>
+  <tr>
+    <td><h3>SVM</h3></td>
+    <td>6 months</td>
+    <td>0.0254</td>
+     <td>22.54 Seconds</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>12 months</td>
+    <td>0.0257</td>
+     <td>72.01 seconds</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+     <td></td>
+  </tr>
+  
+    <tr>
+    <td></td>
+    <td>3 months</td>
+    <td>0.0849</td>
+	<td>25.21 seconds</td>
+    
+  </tr>
+  <tr>
+    <td><h3>LSTM</h3></td>
+    <td>6 months</td>
+    <td>0.0484</td>
+    <td>32.17 seconds</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>12 months</td>
+    <td>0.0392</td>
+     <td>38.32 seconds</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+     <td></td>
+  </tr>
+    <tr>
+    <td></td>
+    <td>3 months</td>
+    <td>0.0594</td>
+     <td>1.25 seconds</td>
+    
+  </tr>
+  <tr>
+    <td><h3>Gradient Boosting</h3></td>
+    <td>6 months</td>
+    <td>0.07654</td>
+     <td>2.37 seconds</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>12 months</td>
+    <td>0.0853</td>
+     <td>4.09 seconds</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+     <td></td>
+  </tr>
+    <tr>
+    <td></td>
+    <td>3 months</td>
+    <td>0.0246</td>
+     <td>1.11 seconds</td>
+    
+  </tr>
+  <tr>
+    <td><h3>Decision Tree</h3></td>
+    <td>6 months</td>
+    <td>0.0268</td>
+     <td>1.42 seconds</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>12 months</td>
+    <td>0.0262</td>
+     <td>3.28 seconds</td>
+  </tr>
+
+</table>
+         </div>
+         <div id="live" class="tab-pane fade">
+            <h3 class="headingt">Live Energy Supply and Demand for Different States</h3>
+            <iframe src='https://embed.global-roam.com/containers/6e53b580-eae4-48e0-b689-3379b9d33d23' style='border: none; background: transparent; display: block; width: 100%; min-height: 341px;'></iframe>
+            <img src="../static/images/legend.png" style='width:90%'>
+			<p>This widget was provided by reneweconomy.com.au</p>
+         </div>
+      </div>
+   </section>
+   <section class="article2">
+      <footer>
+         <div class="container-fluid  footer">
+            <div class="row">
+               <p> @ project by Deakin Energy Tribe</p>
+            </div>
+         </div>
+      </footer>
+   </section>
+   <script>
+
+		$(document).ready(function(){
+         //Reference the DropDownList.
+         var year = document.getElementById("fyear");
+
+         //Determine the Current Year.
+         var currentYear = (new Date()).getFullYear();
+
+         //Loop and add the Year values to DropDownList.
+         for (var i = 2005; i < currentYear; i++) {
+            var option = document.createElement("option");
+            option.innerHTML = parseInt(i);
+            option.value = parseInt(i);
+            year.appendChild(option);
+         }
+
+			var tab = get('tab');
+         var year = get('year');
+         var state = get('state');
+         var month = get('month');
+         var festival = get('festival');
+         if(tab == 'festival'){
+				$('#festival_li').click();
+            $('#fyear').val(year)
+            $('#festival_select').val(festival);
+			}else if(tab == 'monthly'){
+				$('#monthly_li').click();
+            $('#mstate').val(state)
+            $('#month').val(month);
+
+			}
+		});
+
+		function get(name) {
+				if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+					return decodeURIComponent(name[1]);
+		}
+
+		function option_retainer() {
+			var algorithm = '{{ selected_algorithm }}';
+			if (algorithm > " ") {
+				document.getElementById(algorithm).selected = 'selected';
+			}
+		}
+	</script>
+</body>

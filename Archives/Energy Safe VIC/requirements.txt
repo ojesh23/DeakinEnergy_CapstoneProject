@@ -1,0 +1,8 @@
+flask
+pandas
+matplotlib
+tensorflow==1.14
+sklearn
+keras==2.2.5
+requests
+pygal

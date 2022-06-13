@@ -1,0 +1,118 @@
+<!doctype html>
+<title>File to upload inpout file and predict energy demand</title>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body onload = "option_retainer()">
+	<section>
+		<header>
+			<div class = "container">
+				<h1 class = "logo"> Australia Electricity Demand Prediction  </h1>
+			</div>
+		</header>
+	</section>
+
+	<section>
+		<article class="article1">
+			<h3>Upload new input file</h3>
+			<p>
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+					<ul class=flashes>
+					{% for message in messages %}
+					  <li>{{ message }}</li>
+					{% endfor %}
+					</ul>
+				  {% endif %}
+				{% endwith %}
+			</p>
+			<form method="post" action="/" enctype="multipart/form-data">
+				<dl>
+					<p>
+						<table>
+							<tr>
+								<td>
+									<input type="file" name="files[]" multiple="true" autocomplete="off" required>
+								</td>
+								<td>
+									<input type="submit" value="Submit">
+								</td>
+							</tr>
+						</table>
+					</p>
+					<h3> (Or) </h3>
+				</dl>
+			</form>
+			<form action="/forecast" method = "POST" enctype="multipart/form-data">
+				<p>
+					<select id = "filelist" name='flist'>
+							<option value = "default" selected>Please select any one uploaded file</option>
+							{% for file in filenames %}
+							<option value = "{{file}}">{{file}}</option>
+							{% endfor %}
+					</select>
+					{% if error %}
+							<p style="color:#FF0000";> Please select an input file from dropdown to process </p>
+					{% endif %}
+				</p>
+				<p style="font-family: Arial"> Select Algorithm :&nbsp;
+					<select id = "algolist" name='alist'>
+							<option id="LSTM" value = "LSTM" selected> LSTM </option>
+							<option id="GB"   value = "Gradient_Booster"> Gradient Booster </option>
+							<option id="DT"   value = "Decision_Tree"> Decision Tree </option>
+							<option id="SVM"   value = "SVM"> SVM </option>
+					</select>
+				</p>
+			<p style="font-family: Arial"> Select Optimizer :&nbsp;
+				<select id = "optimizerlist" name='olist'>
+						<option id="adam" value = "adam" selected> Adam </option>
+						<option id="rmsprop" value="rmsprop"> RMSprop</option>
+						<option id="sgd" value="sgd"> SGD</option>
+				</select>
+			</p>
+				<br>
+				<input type="submit" value="Train and Forecast">
+			</form>
+		</article>
+	</section>
+	<section>
+			{% if selected_algorithm > " " %}
+			<h3 style = "text-align:center"> Algorithm : {{selected_algorithm}}</h3>
+			{% endif %}
+
+			{%if image_name == "default" %}
+				<h3 style = "text-align:center"> Energy forecast chart</h3>
+			{% else %}
+            	<img src="../static/images/{{image_name}}" class="center">
+            {% endif %}
+
+            {% if selected_algorithm > " " %}
+            <h3 style = "text-align:center"> Root Mean Square Error value : {{RMSE}}<h3>
+            {% endif %}
+	</section>
+	<section class ="article2">
+		<footer>
+			<div class="container">
+  		 		<p> @ project by Deakin Energy Tribe</p>
+  		 	</div>
+		</footer>
+	</section>
+	<script>
+
+		function option_retainer() {
+			var algorithm = '{{ selected_algorithm }}';
+			if (algorithm > " ") {
+				document.getElementById(algorithm).selected = 'selected';
+			}
+			var optimizer = '{{ selected_optimizer }}' ;
+			if(optimizer > " ") {
+				document.getElementById(optimizer).selected = 'selected';
+			}
+		}
+
+	</script>
+</body>

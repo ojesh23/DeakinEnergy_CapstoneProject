@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploratory Data Analysis</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="col col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+<h1>Data Exploration</h1>
+&nbsp
+<ul class="nav nav-tabs">
+ <!-- <li class="active"><a data-toggle="tab" href="#home">Home</a></li>-->
+  <li class="active"><a data-toggle="tab" href="#menu1">Overview</a></li>
+  <li><a data-toggle="tab" href="#menu2">Missing Values</a></li>
+  <li><a data-toggle="tab" href="#menu3">Numerical Data</a></li>
+  <li><a data-toggle="tab" href="#menu4">Clearance Space</a></li>
+  <li><a data-toggle="tab" href="#menu5">Council Clearance Space</a></li>
+  <li><a data-toggle="tab" href="#menu6">Span Length</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="menu1" class="tab-pane fade in active">
+      <h2>Overview of dataset</h2>
+      &nbsp;
+      &nbsp;
+     <img src="assets/img/eda/eda1.png" />
+  </div>
+
+  <div id="menu2" class="tab-pane fade">
+      <h2>Missing Values in each column</h2>
+      &nbsp;
+      &nbsp;
+        <p>The solid lines in the column chart represent the number of values present in each column of the dataset.</p>
+      &nbsp;
+     <img src="assets/img/eda/eda2.png"/>
+
+  </div>
+
+  <div id="menu3" class="tab-pane fade">
+      <h2>Visualization of numerical data</h2>
+      &nbsp;
+      &nbsp;
+      <p>The numerical type variables Clearance Space, Council Clearance Space, and Span Length have no relation among them.</p>
+      &nbsp;
+     <img src="assets/img/eda/eda3.png" />
+  </div>
+
+  <div id="menu4" class="tab-pane fade">
+      <h2>Plots of Clearance Space</h2>
+      &nbsp;
+      &nbsp;
+       <p>The data is right skewed and has a few outliers.</p>
+      &nbsp;
+     <img src="assets/img/eda/eda4.png" />
+  </div>
+
+  <div id="menu5" class="tab-pane fade">
+      <h2>Plots of Council Clearance Space</h2>
+      &nbsp;
+      &nbsp;
+       <p>The data is distributed and has no outliers.</p>
+      &nbsp;
+     <img src="assets/img/eda/eda5.png" />
+  </div>
+
+  <div id="menu6" class="tab-pane fade">
+      <h2>Plots of Span Length</h2>
+      &nbsp;
+      &nbsp;
+       <p>The data is highly right skewed with short span, and contains extreme outliers.</p>
+      &nbsp;
+     <img src="assets/img/eda/eda6.png" />
+  </div>
+
+</div>
+</div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+    <div class="col col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+    <h1>Data Visualization</h1>
+&nbsp;
+    <div class='tableauPlaceholder' id='viz1616470609494' style='position: relative'>
+        <noscript><a href='#'><img alt=' '
+                                   src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Regional_16163806852460&#47;Dashboard4&#47;1_rss.png'
+                                   style='border: none'/></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+            <param name='embed_code_version' value='3'/>
+            <param name='site_root' value=''/>
+            <param name='name' value='Regional_16163806852460&#47;Dashboard4'/>
+            <param name='tabs' value='no'/>
+            <param name='toolbar' value='yes'/>
+            <param name='static_image'
+                   value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Regional_16163806852460&#47;Dashboard4&#47;1.png'/>
+            <param name='animate_transition' value='yes'/>
+            <param name='display_static_image' value='yes'/>
+            <param name='display_spinner' value='yes'/>
+            <param name='display_overlay' value='yes'/>
+            <param name='display_count' value='yes'/>
+            <param name='language' value='en'/>
+            <param name='filter' value='publish=yes'/>
+        </object>
+    </div>
+    <script type='text/javascript'>                    var divElement = document.getElementById('viz1616470609494');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '727px';
+    }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+
+</body>
+</html>

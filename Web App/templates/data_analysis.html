@@ -1,0 +1,401 @@
+{# {% extends "base.html" %} #}
+
+<!-- Profiling Non-Compliant Cases-->
+{% block pnc %}
+<section id="profilingNc" class="section-padding features">
+    <div class="container col-lg-offset-1 col-lg-10">
+        <div class="row">
+        <h1>Profiling Non Compliant Cases</h1>
+            <ul class="nav nav-tabs" style="width:90%">
+                <li class="active"><a data-toggle="tab" href="#pncTab1">Pattern1</a></li>
+                <li><a data-toggle="tab" href="#pncTab2">Pattern2</a></li>
+                <li><a data-toggle="tab" href="#pncTab3">Pattern3</a></li>
+                <li><a data-toggle="tab" href="#pncTab4">Pattern4</a></li>
+                <li><a data-toggle="tab" href="#pncTab5">Pattern5</a></li>
+                <li><a data-toggle="tab" href="#pncTab6">Pattern6</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="pncTab1" class="tab-pane fade in active">
+                <h2>SpanLength</h2>
+                    <div class="container col-lg-6 col-md-6 col-sm-6">
+                        <img src="assets/img/pnc/pnc1.png" />
+                    </div>
+                    <div class="container col-lg-5 col-md-5 col-sm-5">
+                        <p style="text-align:justify">Span length represents the distance between two electrical poles. This graph shows the span length distribution in non-compliant cases. As seen, the amount of non-compliant cases piled up in the areas where the spans were low. More and more non-compliant cases subsided as the span length expended. The peak of non-compliant cases extended between 30 to 50. </br></br> We can infer that span length had a noticeable pattern that can be used in tracking non-compliant cases.</p>
+                    </div>
+                </div>
+                <div id="pncTab2" class="tab-pane fade">
+                <h2>ClearanceSpace</h2>
+                <div class="container col-lg-6 col-md-6 col-sm-6">
+                    <img src="assets/img/pnc/pnc2.png" />
+                </div>
+                <div class="container col-lg-5 col-md-5 col-sm-5">
+                    <p style="text-align:justify">This graph illustrates Clearance Space distribution in non-compliant cases. Evidentially the amount of non-compliant cases was highest at the range between 0-180. As the clearance space increased, the non-compliant cases began to drop and almost reached to zero when the range was significantly higher i.e. from 1080-1800.</br></br>Therefore, this distribution gives us a noticeable pattern of clearance space in relation to non-compliant cases and we can infer that low clearance space is very likely to be responsible for the non-compliant cases.</p>
+                </div>
+                </div>
+                <div id="pncTab3" class="tab-pane fade">
+                <h2>MaintainedBy</h2>
+                <div class="container col-lg-6 col-md-6 col-sm-6">
+                    <img src="assets/img/pnc/pnc3.png" />
+                </div>
+                <div class="container col-lg-5 col-md-5 col-sm-5">
+                    <p style="text-align:justify">This pie chart shows the proportional percentage of non-complaint cases, either maintained by council, company, or both. Within the area which was maintained by both council and company, the percentage of non-complaint case was significantly low i.e. 3%. The percentage became higher when the areas were maintained by company or council individually.</br></br>Therefore, it gives a clear sign that joined collaboration between both parties significantly contributes to reduction of non-compliant cases.</p>
+                </div>
+                </div>
+                <div id="pncTab4" class="tab-pane fade">
+                <h2>ResponsibleCouncil</h2>
+                <div class="container col-lg-6 col-md-6 col-sm-6">
+                    <img src="assets/img/pnc/pnc4.png" />
+                </div>
+                <div class="container col-lg-5 col-md-5 col-sm-5">
+                    <p style="text-align:justify">This plot compares the percentage of non-complaint cases by responsible councils for two different programs i.e. LBRAs and HBRAs. The cases with HBRAs were 100% compliant by responsible councils. However, within LBRAs program, there were 15 councils who were found to be non-compliant. Boroondara was on the lead with up to 18% of non-compliant cases as compared to others.</br></br>Overall, non-compliant cases tended to happen only in LBRA program type, and a number of councils were found to contribute to this scenario.</p>
+                </div>
+                </div>
+                <div id="pncTab5" class="tab-pane fade">
+                <h2>ResponsibleCouncil</h2>
+                <div class="container col-lg-6 col-md-6 col-sm-6">
+                    <img src="assets/img/pnc/pnc5.png" />
+                </div>
+                <div class="container col-lg-5 col-md-5 col-sm-5">
+                    <p style="text-align:justify">This graph represents the councils responsible for both high risk (HRNC) and low risk (LR) of non-complaint cases combined. Red color shows HRNC while white shows NC count. Most of council tends to have a balance of HRNC and NC, except that of Boroondara whose high-risk cases outweighed the low-risk ones.</br></br>In summary, this graph reveals the critical information that spotlights the high and low risk of non-compliant cases among responsible councils and helps in prioritizing plan for next inspection.</p>
+                </div>
+                </div>
+                <div id="pncTab6" class="tab-pane fade">
+                <h2>SpanVoltages</h2>
+                <div class="container col-lg-6 col-md-6 col-sm-6">
+                    <img src="assets/img/pnc/pnc6.png"/>
+                </div>
+                <div class="container col-lg-5 col-md-5 col-sm-5">
+                    <p style="text-align:justify">This chart demonstrates the amount of non-compliant cases within each type of span voltages which further classified into high risk (HRNC) and low risk (NC) scenario. As seen in the graph, low voltage [LV] locations shared the largest proportion of non-compliance, both in HRNC and NC cases. High voltage [HV] locations were responsible for the second largest proportion in NC cases, while locations that ran [HV, LV] similarly claimed the second rank in HRNC cases.</br></br>The combination of 20 other types of locations (Others) did not seem to have any signification contribution to these non-compliant cases. In the order of HRNC we notice that [LV] locations need the greatest attention and initiatives, followed by [HV, LV], then [HV] locations, and later other type of locations. </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block hypothesis_diagram %}
+
+<section id="hypothesis_diagram"  class="section-padding features">
+     <div class="container col-lg-offset-1 col-lg-9">
+             <div class="row">
+        <h1>Patterns of Non-Compliant Cases</h1>
+        <h2>Hypothesis Test Model Design</h2>
+                 <img src="assets/img/hypothesis/hypothesis_diagram.png"/>
+             </div>
+             </div>
+     </div>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:black;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:18px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-zda1{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-lp6l{background-color:black;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:18px;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-q34q{background-color:black;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:18px;font-weight:bold;
+  text-align:center;vertical-align:top}
+</style>
+
+
+     <div class="container col-lg-offset-1 col-lg-10">
+       <div style = " width:80%">
+         <h2>Hypothesis Experiment Results</h2>
+          <h5 style="color:white;">The below findings are given within their individual interval (Upper and Lower Limit) which has been studied under 95% level of confidence. </h5>
+          <h3 style="color:white;">How to interpret the below findings:</h3>
+          <p>Each of the value in the table represents the proportion of non-compliant cases in each sub category and main category. For instance, in a main category of [Network Type], there exist the non-compliant cases ranging between 10.41% to 11.70% of ANS sub-type. This prediction is ascertained under 95% of confidence level.</p>
+       </div>
+
+         <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-q34q" colspan="10">Network Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-zda1" colspan="2">ANS</td>
+                <td class="tg-zda1" colspan="2">CP</td>
+                <td class="tg-zda1" colspan="2">JEN</td>
+                <td class="tg-zda1" colspan="2">PC</td>
+                <td class="tg-zda1" colspan="2">UE<br></td>
+              </tr>
+              <tr>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1">Lower Limit</td>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1">Lower Limit</td>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1">Lower Limit</td>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1">Lower Limit</td>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1">Lower Limit</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1">11.70%</td>
+                <td class="tg-zda1">10.41%</td>
+                <td class="tg-zda1">72.77%</td>
+                <td class="tg-zda1">65.00%</td>
+                <td class="tg-zda1">24.89%</td>
+                <td class="tg-zda1">21.00%</td>
+                <td class="tg-zda1">9.89%</td>
+                <td class="tg-zda1">8.80%</td>
+                <td class="tg-zda1">18.26%</td>
+                <td class="tg-zda1">16.51%</td>
+              </tr>
+              <tr>
+                <td class="tg-lp6l" colspan="10">Financial Year</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="3">2017 - 2018</td>
+                <td class="tg-zda1" colspan="4">2018- 2019</td>
+                <td class="tg-zda1" colspan="3">2019 - 2020</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1">Lower Limit</td>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+                <td class="tg-zda1">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1">Lower Limit</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1">7.05%</td>
+                <td class="tg-zda1">5.60%</td>
+                <td class="tg-zda1" colspan="2">15.52%</td>
+                <td class="tg-zda1" colspan="2">14.33%</td>
+                <td class="tg-zda1">24.74%</td>
+                <td class="tg-zda1">23.32%</td>
+              </tr>
+              <tr>
+                <td class="tg-q34q" colspan="10">Inspection Type</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="5">HBRA</td>
+                <td class="tg-zda1" colspan="5">LBRA</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="2">6.14%</td>
+                <td class="tg-zda1" colspan="2">5.42%</td>
+                <td class="tg-zda1" colspan="2">24.75%</td>
+                <td class="tg-zda1" colspan="2">23.32%</td>
+              </tr>
+              <tr>
+                <td class="tg-q34q" colspan="10">Low Bush Fire Related Area</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="5">Declared</td>
+                <td class="tg-zda1" colspan="5">Non Declared</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="2">36.85%</td>
+                <td class="tg-zda1" colspan="2">34.53%</td>
+                <td class="tg-zda1" colspan="2">14.50%</td>
+                <td class="tg-zda1" colspan="2">12.90%</td>
+              </tr>
+              <tr>
+                <td class="tg-q34q" colspan="10">High Bush Fire Related Area</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="5">Declared</td>
+                <td class="tg-zda1" colspan="5">Non Declared</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+                <td class="tg-zda1" colspan="2">Upper Limit</td>
+                <td class="tg-zda1" rowspan="2"></td>
+                <td class="tg-zda1" colspan="2">Lower Limit</td>
+              </tr>
+              <tr>
+                <td class="tg-zda1" colspan="2">4.42.%</td>
+                <td class="tg-zda1" colspan="2">1.25%</td>
+                <td class="tg-zda1" colspan="2">6.18%</td>
+                <td class="tg-zda1" colspan="2">5.45%</td>
+              </tr>
+            </tbody>
+            </table>
+
+
+
+        </div>
+
+</section>
+{% endblock %}
+
+<!-- Recommendation-->
+{% block recommendation %}
+<section id="recommendation" class="section-padding features">
+    <div class="container col-lg-offset-1 col-lg-10">
+        <div class="row">
+        <h1>Next Year Inspections</h1>
+            <ul class="nav nav-tabs" style="width:85%">
+                <li class="active"><a data-toggle="tab" href="#navTab1">Methodology</a></li>
+                <li ><a data-toggle="tab" href="#navTab2">Recommended PostCodes</a></li>
+                <li ><a data-toggle="tab" href="#navTab3">Key Assumptions</a></li>
+                <li><a data-toggle="tab" href="#navTab4">Map Visualization</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="navTab1" class="tab-pane fade in active">
+                    <div class = "container col-lg-6">
+                        <h2>Method Overview</h2>
+                        <img src="assets/img/recommender/Pipeline.png" style="width:60%"/>
+                    </div>
+                    <div class = "container col-lg-5">
+                        <h2>Flow Chart</h2>
+                        <img src="assets/img/recommender/Flowchart.png" style="width:90%"/>
+                    </div>
+                </div>
+                <div id="navTab2" class="tab-pane fade">
+                <h2>Recommended postcodes for next year inspection</h2>
+                    <p>The table shows the locations that are suggested to have next year inspection. The higher score explains the higher level of necessity for the locations to be inspected.</p>
+                <div class="container col-lg-10 col-md-10">
+                    <table class="table table-condensed stats" >
+                    <tbody>
+                    <tr>
+                        <th>Postcode</th>
+                        <td>TotalScore</td>
+                    </tr>
+                    <tr>
+                        <th>3765</th>
+                        <td>14.51625</td>
+                    </tr>
+                    <tr>
+                        <th>3707</th>
+                        <td>13.811667</td>
+                    </tr>
+                    <tr>
+                        <th>3043</th>
+                        <td>9.929412</td>
+                    </tr>
+                    <tr>
+                        <th>3277</th>
+                        <td>9.83</td>
+                    </tr>
+                    <tr>
+                        <th>3044</th>
+                        <td>9.185</td>
+                    </tr>
+                    <tr>
+                        <th>3579</th>
+                        <td>8.802857</td>
+                    </tr>
+                    <tr>
+                        <th>3641</th>
+                        <td>8.502353</td>
+                    </tr>
+                    <tr>
+                        <th>3015</th>
+                        <td>8.2</td>
+                    </tr>
+                    <tr>
+                        <th>3691</th>
+                        <td>8.171429</td>
+                    </tr>
+                    <tr>
+                        <th>3636</th>
+                        <td>7.704082</td>
+                    </tr>
+                    <tr>
+                        <th>3088</th>
+                        <td>7.690909</td>
+                    </tr>
+                    <tr>
+                        <th>3218</th>
+                        <td>7.687234</td>
+                    </tr>
+                    <tr>
+                        <th>3722</th>
+                        <td>7.642857</td>
+                    </tr>
+                    <tr>
+                        <th>3678</th>
+                        <td>7.544082</td>
+                    </tr>
+                    <tr>
+                        <th>3068</th>
+                        <td>6.895</td>
+                    </tr>
+                    <tr>
+                        <th>3649</th>
+                        <td>6.881818</td>
+                    </tr>
+                    <tr>
+                        <th>3658</th>
+                        <td>6.809127</td>
+                    </tr>
+                    <tr>
+                        <th>3108</th>
+                        <td>6.781818</td>
+                    </tr>
+                    <tr>
+                        <th>3042</th>
+                        <td>6.755488</td>
+                    </tr>
+                    <tr>
+                        <th>3690</th>
+                        <td>6.542105</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+                <div id="navTab3" class="tab-pane fade">
+                <h2>Key assumptions in relation to the nature of vegetation and incidents</h2>
+                <div class="container col-lg-11">
+                    <p>1. If no inspections are done in last 3 financial years, it is most likely that incident will occur at the locations where vegetation exists near the electrical line.</br>
+                    2. Places that have HIGH incident rate related to vegetation-contact but have LOW inspection rate are strongly recommended for frequent inspection.</br>
+                    3. If there have been many non-compliant inspections in the last 3 years, it tends to stay non-compliant in the following year.</br>
+                    4. If the several incidents have occurred in last 3 financial years, it is most likely to happen again in the following year.</br>
+                    5. The rate of non-compliance for lines that have undergone hazard assessment is between 16% to 17%. However, non-compliance of lines without hazard assessment could NOT be done because of CLT.</br>
+                    6. Between single and multiple trees, non-compliant lines with multiple trees are 3% to 7% more than that with single tree.</br>
+                    7. Network provider with higher incident rates requires higher priority of inspection.</p>
+                </div>
+                </div>
+                <div id="navTab4" class="tab-pane fade">
+                <h2>Postcodes Visualization</h2>
+                    <p>The map indicates the locations that need to be inspected. The red-color locations are strongly suggested for next year inspection.</p>
+{#                    <img src="assets/img/recommender/Viz.png" />#}
+                        <iframe src="recommendation_postcodes.html" width="90%" height="700px" frameBorder=0></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Download report" class="section-padding features">
+     <div class="container col-lg-offset-1 col-lg-9">
+            <a href="assets/pdf/DeakinEnergy_clientReport.pdf" download>
+                <h4>Download the client report here:</h4>
+                <img class="img-responsive" src="assets\img\download_icon.png" style="width:10%"\>
+            </a>
+     </div>
+</section>
+
+{% endblock %}
+
+

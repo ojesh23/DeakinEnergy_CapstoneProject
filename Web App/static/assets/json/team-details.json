@@ -1,0 +1,45 @@
+{
+  "team": [{
+    "name":"Keerthana",
+    "img":"assets/img/team/Keerthana.jpeg",
+    "linkedin":"https://www.linkedin.com/in/keerthanasivakumaran",
+    "position":"Senior"
+  },
+  {
+    "name":"Melissa",
+    "img":"assets/img/team/Melissa.jpeg",
+    "linkedin":"https://www.linkedin.com/in/melissa-aranha-59368353",
+    "position":"Senior"
+  },
+  {
+    "name":"Varun",
+    "img":"assets/img/team/Varun.jpeg",
+    "linkedin":"https://www.linkedin.com/in/varun-kewlani",
+    "position":"Senior"
+  },
+    {
+    "name":"Kavya",
+    "img":"assets/img/team/Kavya.png",
+    "linkedin":"https://www.linkedin.com/in/kavya-munnangi-69480a1ba",
+    "position":"Senior"
+  },
+    {
+    "name":"Pradeep",
+    "img":"assets/img/team/Pradeep.png",
+    "linkedin":"https://www.linkedin.com/in/pradeep-thapa-522424104",
+    "position":"Junior"
+  },
+    {
+    "name":"Wellia",
+    "img":"assets/img/team/Wellia.jpg",
+    "linkedin":"https://www.linkedin.com/in/wellia-lioeng",
+    "position":"Junior"
+  },
+    {
+    "name":"Ozy",
+    "img":"assets/img/team/Ozy.jpg",
+    "linkedin":"https://www.linkedin.com/in/ojesh-joshi",
+    "position":"Junior"
+  }
+  ]
+}

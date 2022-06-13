@@ -1,0 +1,65 @@
+{#{% extends "base.html" %}#}
+
+{% block landingPage %}
+<!-- START HEARDER SECTION -->
+<header id="home" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="caption">
+                                <div class="header-text text-center">
+                                    <h1 class="animated fadeInLeftBig">Energy Safe Victoria</h1>
+                                    <p class="animated fadeInRightBig">Deakin Energy</p>
+                                    <a href="#welcome" class="page-scroll ank animated fadeInUpBig">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="header-text text-center">
+                                    <h1 class="animated fadeInDownBig">Electrical Network-related Data Analysis</h1>
+                                    <p class="animated fadeInUpBig">Deakin Energy</p>
+                                    <a href="#welcome" class="page-scroll ank animated fadeInUpBig">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                    <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block readMore %}
+<!-- START READ MORE SECTION -->
+<section id="welcome" class="section-padding welcome">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2><i class="fa fa-laptop" aria-hidden="true"></i> Exploratory Data Analysis</h2>
+                        <p>Is there any place that has high vegetation contact related incident rate but low inspection rate or vice versa?</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2><i class="fa fa-rocket" aria-hidden="true"></i> Machine Learning Clustering</h2>
+                        <p> Profiling non-compliant cases. Is there any trend or pattern?<br>Build a recommender for locations of next year inspection.<br></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2><i class="fa fa-camera" aria-hidden="true"></i> Web Application</h2>
+                        <p>This Application will give you insights about the data explorations and visualisations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

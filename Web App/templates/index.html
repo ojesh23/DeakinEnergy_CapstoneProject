@@ -1,0 +1,1416 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Energy Safe Victoria</title>
+    <!-- Standard -->
+    <link rel="shortcut icon" href="assets/img/ficon.png">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- latest fonts awesome -->
+    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <!--  baguetteBox -->
+    <link rel="stylesheet" href="assets/css/baguetteBox.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://p.trellocdn.com/embed.min.js"></script>
+    <script>
+		var teamFile = "assets/json/team-details.json";
+		var teamDOM = "";
+    	$(document).ready(function(){
+        $.getJSON(teamFile,function(data){
+            console.log("Team-members :"+data.team);
+
+            $.each(data.team,function(count,item){
+                if( item.img.match(/\.(jpe?g|png|gif)$/) ) {
+
+                    teamDOM = teamDOM + '<div class="col-md-3"><div class="team-post"><img src='+ item.img +'><ul class="team-social"><li><a class="linkedin" href='+item.linkedin+'><i class="fa fa-linkedin"></i></a></li></ul><div class="team-content"><h2>'+item.name+'</h2><span>'+item.position+'</span></div></div></div>';
+                    if(count%3 == 0 && count >= 3){
+                        teamDOM = '<div class="container"><div class="row">'+teamDOM+'</div></div>';
+                         $('#team-section').append(teamDOM);
+                        teamDOM = '';
+                    }
+                    if(((data.team.length-1) == count) && teamDOM.length > 0){
+                     teamDOM = '<div class="container"><div class="row">'+teamDOM+'</div></div>';
+                      $('#team-section').append(teamDOM);
+                        teamDOM = '';
+                    }
+                }
+            });
+        });
+
+	});			
+	</script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!--  nav  -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<!--    <div class="container">-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+           <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+            <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"/>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left" style="font-size:small;">
+                <li>
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#exploration">Exploration</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#classifiers-metrics">Classifiers and Metrics</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#classifiers"> Classification Models </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#contactIncidents">Contact Incidents</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#groundFire">Ground Fire</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#injuries">Injuries</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#services">Tools</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#team-section">Team</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#AddIncident">Incident</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- navbar-collapse  -->
+<!--    </div>-->
+</nav>
+
+<!-- START HEARDER SECTION -->
+<header id="home" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="caption">
+                                <div class="header-text text-center">
+                                    <h1 class="animated fadeInLeftBig">Energy Safe Victoria</h1>
+                                    <p class="animated fadeInRightBig">Deakin Energy</p>
+                                    <a href="#welcome" class="page-scroll ank animated fadeInUpBig">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="header-text text-center">
+                                    <h1 class="animated fadeInDownBig">Electrical Network-related Data Analysis</h1>
+                                    <p class="animated fadeInUpBig">Deakin Energy</p>
+                                    <a href="#welcome" class="page-scroll ank animated fadeInUpBig">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                    <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!-- START HOME SECTION -->
+<section id="welcome" class="section-padding welcome">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2><i class="fa fa-laptop" aria-hidden="true"></i> Exploratory Data Analysis</h2>
+                        <p>Interactive Data Visualisations and insights for vegetation & animal contact incidents,
+                            factors for ground fire and injuries per categories.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2><i class="fa fa-rocket" aria-hidden="true"></i> Multiclass Classification Model</h2>
+                        <p>Multiclass classifier to classify all the categories using machine learning algorithms.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2><i class="fa fa-camera" aria-hidden="true"></i> Classifier Web Application</h2>
+                        <p>A system to classify that can categorise an incident within an acceptable level of error.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- START ABOUT SECTION -->
+<section id="about" class="section-padding about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h2>ABOUT US</h2>
+                            <p>Energy Safe Victoria is the regulator responsible for electrical and gas safety in the
+                                state. This statutory authority
+                                audits the design, construction and maintenance of electricity and gas networks and
+                                installations and ensures that
+                                appliances meet stringent safety and energy efficiency standards before they are sold.
+
+                                Energy Safe Victoria also conducts comprehensive public awareness safety campaigns to
+                                educate the community on the
+                                potential dangers of gas and electricity.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 work">
+                                <h3>What is this project all about?</h3>
+                                <p>Electricity distribution businesses reports any electrical network-related incidents
+                                    to Energy Safe Victoria as part of
+                                    their regulatory obligations.</p>
+                                <p> This project aims to analyse these datasets to see any trends and patterns that lead
+                                    to
+                                    these incidents from occurring.</p>
+
+<!--                                <a class="btn-wt-bdr2" href="#classifiers">Get Started</a>-->
+                            </div>
+                            <div class="col-md-6">
+                                <img src="assets/img/project_img.jpg" alt="about">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-padding about-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 aims-holder">
+                        <img class="img-aims" src="assets/img/aims.png" alt="aims"/>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Our Aims</h2>
+                        <ul>
+                            <li> Determine the most influential
+                                factors related to
+                                network-related incidents.
+                            </li>
+                            <li> Analyse the degree of influence
+                                each factors may have to
+                                predict an incident from occurring.
+                            </li>
+                            <li> Create a predictive model that
+                                could classify the incidents
+                                based on the data.
+                            </li>
+                        </ul>
+<!--                        <a class="btn-wt-bdr2" href="">Get Started</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- START EXPLORATION SECTION -->
+<section id="exploration" class="section-padding team-box">
+        <div class="explorations">
+                    <div class="title">
+                        <h2>EXPLORATION<span></span></h2>
+                        <p>Below are the key highlights about the ESV dataset and the pipeline details</p>{{ message|safe }}
+                    </div>
+
+                            <div id="dataset" class="carousel slide" data-interval="false" style="bg:white;">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#dataset" data-slide-to="0" class="active"></li>
+                                    <li data-target="#dataset" data-slide-to="1"></li>
+                                    <li data-target="#dataset" data-slide-to="2"></li>
+                                    <li data-target="#dataset" data-slide-to="3"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="assets/img/keyhighlights.png" alt="Key Highlights">
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/img/incident2.png" alt="Incident Category Frequency" >
+                                    </div>
+                                    <div class="item">
+                                        <p class="txt-pipeline">Pipeline for Text Wrangling</p>
+                                        <img class="img-pipe-wrang" src="assets/img/pipeline_text_wrangling.png" alt="Pipeline Text Wrangling">
+                                    </div>
+                                    <div class="item">
+                                        <p class="txt-pipeline">Pipeline for Web App Prediction</p>
+                                        <img class="img-pipeline" src="assets/img/pipeline_web_app.png" alt="Pipeline Web App">
+                                    </div>
+                                </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#dataset" data-slide="prev" style="background:transparent;">
+                                    <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#dataset" data-slide="next" style="background:transparent;">
+                                    <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+        </div>
+</section>
+<section id="wordcloud" class="section-padding classify-bg">
+        <div class="wordcloud">
+            <div id="dataset2" class="carousel slide" data-interval="false" style="bg:white;">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                <li data-target="#dataset2" data-slide-to="0"class="active"></li>
+                <li data-target="#dataset2" data-slide-to="1"></li>
+                <li data-target="#dataset2" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner carousel-wordcloud">
+                    <div class="item active">
+                        <div class='tableauPlaceholder' id='viz1611031120017' style='position: relative'>
+                           <noscript>
+                              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WordCloud_Public&#47;Story1&#47;1_rss.png' style='border: none' /></a>
+                           </noscript>
+                           <object class='tableauViz'  style='display:none;'>
+                              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                              <param name='embed_code_version' value='3' />
+                              <param name='site_root' value='' />
+                              <param name='name' value='WordCloud_Public&#47;Story1' />
+                              <param name='tabs' value='no' />
+                              <param name='toolbar' value='yes' />
+                              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WordCloud_Public&#47;Story1&#47;1.png' />
+                              <param name='animate_transition' value='yes' />
+                              <param name='display_static_image' value='yes' />
+                              <param name='display_spinner' value='yes' />
+                              <param name='display_overlay' value='yes' />
+                              <param name='display_count' value='yes' />
+                              <param name='language' value='en' />
+                              <param name='filter' value='publish=yes' />
+                           </object>
+                        </div>
+                        <script type='text/javascript'>
+                                var divElement = document.getElementById('viz1611031120017');
+                                var vizElement = divElement.getElementsByTagName('object')[0];
+                                vizElement.style.minWidth='400px';
+                                vizElement.style.maxWidth='1000px';
+                                vizElement.style.width='100%';
+                                vizElement.style.minHeight='327px';
+                                vizElement.style.maxHeight='527px';
+                                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                                var scriptElement = document.createElement('script');
+                                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                        </script>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/chi2.png" alt="chi2" >
+                    </div>
+
+                    <div class="item">
+                        <img src="assets/img/information_gain.png" alt="ig" >
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#dataset2" data-slide="prev" style="background:transparent;">
+                    <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                    <a class="right carousel-control" href="#dataset2" data-slide="next" style="background:transparent;">
+                    <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+</section>
+
+<!--Classifiers and Metrics-->
+<section id="classifiers-metrics" class="section-padding">
+    <div class="classifier-metrics-wrapper">
+        <h2>Classifiers and Metrics</h2>
+        <div class="subheading-holder1">
+            <h4>Classifier Performance</h4>
+            <div class="performance-img-holder">
+                <img src="assets/img/classifier_performance.png">
+            </div>
+            <p>In the barchart above, the comparisons of average precision and F1 measure are made between different classifiers. Talking about the
+            average precision, Voting classifiers has the highest value for average precision whereas Support Vector Machine has the lowest.
+            Even when it comes to F1 measure, the Voting classifier is capable of putting up the highest value but Stochastic Gradient Descent results in the lowest percentage in this case.</p>
+        </div>
+        <div class="subheading-holder2">
+            <h4>Performance Metrics</h4>
+            <p>Due to the imbalanced dataset, our goal is to improve recall without hurting precision. These goals, however, are often conflicting, since in order to increase the True Positives for the minority class, the number of False Positives is also often increased, resulting in reduced precision.
+
+            <br><br>Classification accuracy is widely used because it is one single measure used to summarize model performance.
+
+            <br><br>F-Measure provides a way to combine both precision and recall into a single measure that captures both properties.
+
+            <br><br>For imbalanced learning, recall is typically used to measure the coverage of the minority class.
+
+            <br><br>Precision-Recall is a useful measure of success of prediction when the classes are very imbalanced so we used Precision-recall curve as a diagnostic tool.
+
+            <br><br>In short:<br>
+            Precision quantifies the number of positive class predictions that actually belong to the positive class. Recall quantifies the number of positive class predictions made out of all positive examples in the dataset.<br>
+            F-Measure provides a single score that balances both the concerns of precision and recall in one number.
+
+            <br><br>Ref: <a class="refLink" href="https://machinelearningmastery.com/precision-recall-and-f-measure-for-imbalanced-classification/" target="_blank">(Brownlee, 2020)</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- START TEAM SECTION -->
+<section id="classifiers" class="section-padding team-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 align="center" style="color:black">Classification Models</h2>
+                <p align="center">Enter the event description, incident cause/s and incident consequence/s.<br>Select a classifier and click on the button. <br> Or click on
+                        the "Classify All" button
+                        to use all classifiers at once.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!--<div class="col-xs-4 col-xs-offset-4 form-holder">-->
+            <div class="col-xs-offset-4 form-holder">
+                <form align="center" method="POST">
+                    <label for="event" align="center">Event Description (Required)</label><br>
+                                    <textarea id="event" name="event" minlength="10" required rows="5" cols="50">{{incident|safe}}</textarea><br>
+                                    <label for="cause" align="center">Incident Causes</label><br>
+                                    <textarea id="cause" name="cause" rows="2" cols="50">{{cause|safe}}</textarea><br>
+                                    <label for="consequence" align="center">Incident Consequences</label><br>
+                                    <textarea id="consequence" name="consequence" rows="2" cols="50">{{consequence|safe}}</textarea>
+                    <div>
+                        <br>
+                        <select name="classifier" id="classifier" class="form-control">
+                            <option value='select_classifier' selected="selected">Select Classifier</option>
+                            <option value="sgd">Stochastic gradient descent</option>
+                            <option value="lr">Logistic Regression</option>
+                            <option value="rnn">Recurrent Neural Network</option>
+                            <option value="rf">Random Forest</option>
+                            <option value="svc">Support Vector Machine</option>
+                            <option value="xgb">XGBoost</option>
+                            <option value="votingclassifier">Voting</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="floating-label-group">
+                        <input type="submit" formaction="/predict" value="Classify" class="btn btn-blue">
+                        <input type="submit" value="Classify All" formaction="/predictall" class="btn btn-blue"/>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="table" class="section-padding classify-bg">
+    <!--{% if scroll %}-->
+        <script>
+            document.location.hash = '#' + '{{ scroll }}';
+        </script>
+        <!--{% endif %}-->
+
+    <div class="table-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-holder">
+                    <h2 style="color:white">Classification Results</h2>
+                <table class="table-classifiers">
+                    <thead>
+                        <tr>
+                            <th>Classifiers</th>
+                            <th>Accuracy</th>
+                            <th>F1 measure</th>
+                            <th>Average Precision</th>
+                            <th>Recall</th>
+                            <th>Prediction</th>
+                            <th>Probability</th>
+                            <th>Classifier Explanation</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">Stochastic Gradient Descent</h4></td>
+                        <td> 75.1%</td>
+                        <td>75.4%</td>
+                        <td>80%</td>
+                        <td>75.4%</td>
+                        <td> {{ prediction_probabilities.sgd_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.sgd_prob|safe }} </td>
+                        <td><a id="linkView" class="viewTxt">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">Logistic Regression</h4></td>
+                        <td>80.22%</td>
+                        <td>80.22%</td>
+                        <td>86%</td>
+                        <td>80.22%</td>
+                        <td> {{ prediction_probabilities.lr_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.lr_prob|safe }} </td>
+                        <td><a id="linkView2" class="viewTxt">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">Random Forest</h4></td>
+                        <td> 81.75%</td>
+                        <td>76.9%</td>
+                        <td>76.9%</td>
+                        <td>81.4%</td>
+                        <td> {{ prediction_probabilities.rf_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.rf_prob|safe }} </td>
+                        <td><a id="linkView3" class="viewTxt">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">Recurrent Neural Network</h4></td>
+                        <td>76.32%</td>
+                        <td>76.32%</td>
+                        <td>61%</td>
+                        <td>76.32%</td>
+                        <td> {{ prediction_probabilities.rnn_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.rnn_prob|safe }} </td>
+                        <td><a id="linkView4" class="viewTxt">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">Support Vector Machine</h4></td>
+                        <td> 76.03%</td>
+                        <td>76.03%</td>
+                        <td>80%</td>
+                        <td>76.03%</td>
+                        <td> {{ prediction_probabilities.svc_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.svc_prob|safe }} </td>
+                        <td><a id="linkView5" class="viewTxt">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">XGBoost</h4></td>
+                        <td> 80.84%</td>
+                        <td>80.84%</td>
+                        <td>86%</td>
+                        <td>80.84%</td>
+                        <td> {{ prediction_probabilities.xgb_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.xgb_prob|safe }} </td>
+                        <td><a id="linkView6" class="viewTxt">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4 class="title-classifier">Voting</h4></td>
+                        <td> 81.1%</td>
+                        <td>81.1%</td>
+                        <td>86%</td>
+                        <td>81.1%</td>
+                        <td> {{ prediction_probabilities.voting_pred|safe }} </td>
+                        <td> {{ prediction_probabilities.voting_prob|safe }} </td>
+                        <td><a id="linkView7" class="viewTxt">View</a></td>
+                    </tr>
+
+
+                </table>
+                <br>
+               <!-- <p class="msg">* <em>To predict the incident category, the top six models were combined as
+                    a probabilities arithmetic mean.</em>
+                </p>-->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--    Modal for classifier explanation-->
+    <!--    Stochastic Gradient Descent-->
+    <div id="modalWrapper" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel" class="carousel slide modal-carousel" data-ride="carousel" data-interval="90000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel" data-slide-to="2"></li>
+                            <li data-target="#modalCarousel" data-slide-to="3"></li>
+                            <li data-target="#modalCarousel" data-slide-to="4"></li>
+                            <li data-target="#modalCarousel" data-slide-to="5"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/SGD/SGD_Classification_Report.png" alt="SGD Classification Report">
+                                <p>The classification report visualizer displays the precision, recall, F1, and support scores for the model.
+Incident category ‘Installation’ has the lowest F1 score and ‘Trees’  category has highest F1 score.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SGD/SGD_Confusion_Matrix.png" alt="Confusion matrix RF" >
+                                <p>From above confusion matrix, we can see that this classifier is very good predicting minority classes as well.
+For example, incident category ‘UG Cable’ has 6 test samples and it correctly identifies all 6 of them.</p>
+
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SGD/SGD_Learning_Curve.png" alt="SGD Learning Curve RF">
+                                <p>From above learning curve, we can see that the performance of classifier increases with the number of observations used to train the algorithm.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SGD/SGD_Learning_Curve_Performance.png" alt="SGD Learning Curve 2 RF">
+                                <p>Learning curves are extremely useful to analyze if a model is suffering from over- or under-fitting (high variance or high bias).
+From above, we can see that there is lot of overfitting (low bias and High variance). It was quite good until 30% of the data (low variance and low bias) but after that it starts to overfit.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SGD/SGD_Precision_Recall_Curve.png" alt="SGD Precision Recall RF">
+                                <p>The precision-recall curve shows the tradeoff between precision and recall for different threshold.
+The 'Vehicle' category has the highest precision as we can see that the area under the curve for this category is larger and
+category ‘Installation’ and ‘Conductor’ have the lowest precision.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SGD/SGD_Prediction_Error.png" alt="SGD Prediction Error">
+                                <p>In the above example, while the SGDClassifier appears to be good at correctly predicting most of the category. However,
+category ‘OH Cable’ seems to be predicting incorrectly to category ‘Other’.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left1" href="#modalCarousel" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right1" href="#modalCarousel" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!--    Logistic Regression-->
+    <div id="modalWrapper2" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder2" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose2">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel2" class="carousel slide modal-carousel" data-ride="carousel" data-interval="30000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel2" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel2" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel2" data-slide-to="2"></li>
+                            <li data-target="#modalCarousel2" data-slide-to="3"></li>
+                            <li data-target="#modalCarousel2" data-slide-to="4"></li>
+                            <li data-target="#modalCarousel2" data-slide-to="5"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/LR/lr_classification_report.png" alt="LR Classification Report">
+                                <p>All classifiers have good precision-recall accuracies. The lower number of supports reflex in the low precision-recall scores. This chart shows UG Cable has the lowest score.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/LR/lr_confusion_matrix.png" alt="Confusion matrix LR" >
+                                <p>For majority classes such as Other, Connection and Vehicle, have high number of correct predictions; whereas in minority classes such as UG Cable, the model gives 3 correct predictions and 2 incorrect predictions.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/LR/lr_learningCurve_score.png" alt="LR Learning Curve">
+                                <p>The graph shows with more data, both training and cv scores are improving, until they flat out that shows that adding more data may no longer improving the score. </p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/LR/lr_learningCurve_misclassificationError.png" alt="LR Learning Curve Misclassification Err">
+                                <p>The plot shows that both lines go down as the training data increases. It also shows the high variance.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/LR/lr_precision_recall.png" alt="LR Precision Recall">
+                                <p>Vehicle class has the largest area under the curve and UG Cable has the smallest AUC.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/LR/lr_class_prediction.png" alt="LR Prediction Error">
+                                <p>The more data in the classes, the higher probabilities that the model predicts correctly. In this chart, the minority classes are UG Cable, Installation, and Lightning.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left2" href="#modalCarousel2" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right2" href="#modalCarousel2" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!--    Random Forest-->
+    <div id="modalWrapper3" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder3" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose3">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel3" class="carousel slide modal-carousel" data-ride="carousel" data-interval="30000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel3" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel3" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel3" data-slide-to="2"></li>
+                            <li data-target="#modalCarousel3" data-slide-to="3"></li>
+                            <li data-target="#modalCarousel3" data-slide-to="4"></li>
+                            <li data-target="#modalCarousel3" data-slide-to="5"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/RF/RF_Classification_Report.png" alt="RF Classification Report">
+                                <p>The classification report visualizer displays the precision, recall, F1, and support scores for the model.
+                                Incident category 'Installation' has the lowest precision and 'Other' category has highest precision.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RF/RF_Confusion_Matrix.png" alt="Confusion matrix RF" >
+                                <p>From above confusion matrix, we can see that this classifier is good predicting minority classes as well.
+                                For example, incident category 'UG Cable' has 6 test samples and it correctly identifies 4 of them.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RF/RF_Learning_Curve.png" alt="RF Learning Curve">
+                                <p>From above learning curve, we can see that the performance of classifier increases with the number of observations used to train the algorithm.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RF/RF_Learning_Curve_Performance.png" alt="RF Learning Curve Performance">
+                                <p>Learning curves are extremely useful to analyze if a model is suffering from over- or under-fitting (high variance or high bias).
+                                From above, we can see that upto 30% train and test data, there was low bias and low variance but when we look at 100% of train test
+                                data, we see there is some overfitting (low bias and High variance).</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RF/RF_Precision_Recall_Curve.png" alt="RF Precision Recall">
+                                <p>The precision-recall curve shows the tradeoff between precision and recall for different threshold.
+                                The 'Vehicle' category has the highest precision as we can see that the area under the curve for this category is larger and
+                                category 'Installation' has the lowest precision.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RF/RF_Class_Prediction_Error.png" alt="RF Prediction Error">
+                                <p>In the above example, while the RandomForestClassifier appears to be fairly good at correctly predicting most of the category. However,
+                                category 'Crossarm' seems to be predicting incorrectly to category 'Pole'.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left3" href="#modalCarousel3" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right3" href="#modalCarousel3" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!--    Recurrent Neural Network-->
+    <div id="modalWrapper4" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder4" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose4">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel4" class="carousel slide modal-carousel" data-ride="carousel" data-interval="30000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel4" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel4" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel4" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/RNN/confusion matrix.png" alt="RNN Confusion matrix">
+                                <p>The above confusion matrix of RNN reflects poor prediction results for minority classes such as ‘Installation, ‘UG Cable’, Whereas it accurately predicts the majority classes. </p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RNN/Loss vs epochs.png" alt="RNN Loss vs epochs" >
+                                <p>Loss of validation and training reduces throughout the epochs, but during the later stage of the epochs number, the validation loss (0.8) is slightly higher than the training (0.7). The gap between the two curves is smaller, with minimum overfitting</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/RNN/val-accuracy vs epochs.png" alt="RNN val-accuracy vs epochs">
+                                <p>The training and validation accuracies continue to increase, and they start gaining stability after epoch number 12, and the gap between the curves is kept minimum, which validates the overfitting is kept at minimum. </p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left4" href="#modalCarousel4" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right4" href="#modalCarousel4" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!--    Support Vector Machine-->
+    <div id="modalWrapper5" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder5" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose5">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel5" class="carousel slide modal-carousel" data-ride="carousel" data-interval="30000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel5" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel5" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel5" data-slide-to="2"></li>
+                            <li data-target="#modalCarousel5" data-slide-to="3"></li>
+                            <li data-target="#modalCarousel5" data-slide-to="4"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/SVC/Confusion matrix.png" alt="SVC Confusion matrix">
+                                <p>From the confusion matrix we can conclude that SVC predicts minority classes reasonably good, as an example out of 7 instances of ‘Installation’ just 2 are predicted correctly</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SVC/learning curve - f1 score.png" alt="SVC learning curve - f1 score" >
+                                <p>From the learning curves, we can see that the training and validation accuracies increasing, and they fail to converge as the validation curve become flat at certain level. </p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SVC/learning curve 2.png" alt="SVC learning curve 2">
+                                <p>Learning curves are used here to determine if the model suffers overfitting or underfitting issues. It depicts the larger gap of error between validation and training curves to be an instance of overfitting (high variance, low bias). Also, the error figures do not reduce over the period of training, but the validation error tends to increase after certain time</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SVC/Precision recall curve.png" alt="SVC Precision recall curve">
+                                <p>The precision-recall curve shows the tradeoff between precision and recall for different threshold. A high area under the curve represents both high recall and high precision. From the graph, class ‘Other’ accounts for the highest precision. </p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/SVC/class prediction error.png" alt="SVC class prediction error">
+                                <p>Although SVC predicts the minority classes better. We can see some instances where certain classes are wrongly classified for example, ‘Connection’ can be classified as ‘OH Cable’ or ‘Conductor’ at certain times.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left5" href="#modalCarousel5" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right5" href="#modalCarousel5" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!--    XGBoost-->
+    <div id="modalWrapper6" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder6" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose6">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel6" class="carousel slide modal-carousel" data-ride="carousel" data-interval="30000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel6" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel6" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel6" data-slide-to="2"></li>
+                            <li data-target="#modalCarousel6" data-slide-to="3"></li>
+                            <li data-target="#modalCarousel6" data-slide-to="4"></li>
+                            <li data-target="#modalCarousel6" data-slide-to="5"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/XGB/xgb_classification_report.png" alt="XGB Classification Report">
+                                <p>All classifiers have good precision-recall accuracies. The lower number of supports reflex in the low precision-recall scores. This chart shows UG Cable has the lowest score.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/XGB/xgb_confusion_matrix.png" alt="XGB Confusion Matrix" >
+                                <p>For majority classes such as Other, Connection and Vehicle, have high number of correct predictions; whereas in minority classes such as UG Cable, the model only gives 1 correct prediction and 4 incorrect predictions.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/XGB/xgb_learningCurve_score.png" alt="XGB learning curve">
+                                <p>The graph shows with more data, both training and cv scores are improving, until they flat out that shows that adding more data may no longer improving the score.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/XGB/xgb_learningCurve_misclassificationError.png" alt="XGB learningCurve misclassificationError">
+                                <p>The plot shows that both lines go down as the training data increases. However, there is still a gap between training and test set.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/XGB/xgb_precision_recall.png" alt="XGB Precision Recall">
+                                <p>Vehicle class has the largest area under the curve and UG Cable has the smallest AUC.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/XGB/xgb_class_prediction.png" alt="XGB class prediction error">
+                                <p>Other has the highest number of correctly predicted classes. UG Cable and Installation have the lowest.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left6" href="#modalCarousel6" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right6" href="#modalCarousel6" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!--    Voting-->
+    <div id="modalWrapper7" tabindex="-1" class="classModalWrapper">
+            <div id="modalHolder7" class="modalContent">
+                <div class="modal-header">
+                    <span class="modalClose" id="spClose7">&times;</span>
+                    <h3 class="modalTitle">Classifier Explanation</h3>
+                </div>
+                <div class="modalBody">
+                    <div id="modalCarousel7" class="carousel slide modal-carousel" data-ride="carousel" data-interval="30000" style="bg:black;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators modal-carousel-indicators">
+                            <li data-target="#modalCarousel7" data-slide-to="0" class="active"></li>
+                            <li data-target="#modalCarousel7" data-slide-to="1"></li>
+                            <li data-target="#modalCarousel7" data-slide-to="2"></li>
+                            <li data-target="#modalCarousel7" data-slide-to="3"></li>
+                            <li data-target="#modalCarousel7" data-slide-to="4"></li>
+                            <li data-target="#modalCarousel7" data-slide-to="5"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner modal-carousel-holder">
+                            <div class="item active">
+                                <img src="assets/img/performance_metrics/Voting/Voting_Classification_Report.png" alt="Voting Classification Report" >
+                                <p>The classification report visualizer displays the precision, recall, F1, and support scores for the model.
+Incident category ‘UG Cale' has the lowest F1 score and ‘Dug Up’  category has highest F1 score.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/Voting/Voting_Confusion_Matrix.png" alt="Voting Confusion Matrix">
+                                <p>From above confusion matrix, we can see that this classifier is somewhat good predicting minority classes as well.
+For example, incident category ‘Installation’ has 9 test samples and it correctly identifies 5 of them.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/Voting/Voting_Learning_Curve.png" alt="Voting Learning Curve">
+                                <p>From above learning curve, we can see that the performance of classifier increases with the number of observations used to train the algorithm.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/Voting/Voting_Learning_Curve_Performance.png" alt="Voting Learning Curve Performance">
+                                <p>Learning curves are extremely useful to analyze if a model is suffering from over- or under-fitting (high variance or high bias).
+From above, we can see that there is some overfitting (low bias and High variance).</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/Voting/Voting_Precision_Recall_Curve.png" alt="Voting Voting Precision Recall Curve">
+                                <p>The precision-recall curve shows the tradeoff between precision and recall for different threshold.
+The 'Vehicle' category has the highest precision as we can see that the area under the curve for this category is larger and
+category ‘UG Cable’ has the lowest precision.</p>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/performance_metrics/Voting/Voting_Class_Prediction_Error.png" alt="Voting Class Prediction Error">
+                                <p>In the above example, while the VotingClassifier appears to be good at correctly predicting most of the category. However,
+category ‘Connection’ seems to be predicting incorrectly to category ‘Fuse’.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left7" href="#modalCarousel7" data-slide="prev" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-left" style="color:grey;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right7" href="#modalCarousel7" data-slide="next" style="background:transparent;">
+                            <span class="glyphicon glyphicon-chevron-right" style="color:grey;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="limitations">
+        <h4>Limitations</h4>
+        <div class="limitations-wrapper">
+            <div class="limitations-holder">
+                <img src="assets/img/arrow.png">
+                <p>A few classifiers such as SVC, SGD still suffer from considerable level of ‘Overfitting’, therefore the predictions made by those classifiers may not be precise always.</p>
+            </div>
+            <div class="limitations-holder">
+                <img src="assets/img/arrow.png">
+                <p>Although SMOTE has been used in training phase as an up-sampling technique, it does not validate accurate prediction of the minor classes every time rather improve their precisions/recall/F1 scores.</p>
+            </div>
+            <div class="limitations-holder">
+                <img src="assets/img/arrow.png">
+                <p>Even though the classifiers are optimized, misclassifications among major and minor classes persist to a certain level.</p>
+            </div>
+            <div class="limitations-holder">
+                <img src="assets/img/arrow.png">
+                <p>The aggregated models for Voting classifier are only RF and LR, which show better ‘bias’ and ‘variance’, yet there are few instances of misclassified incidents of majority and minority classes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contactIncidents" class="section-padding team-box">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>General profile of Vegetation, Animal and Bird Contact</h2>
+                    <p>The below dashboard highlights the data profile of vegetation and Animal/Bird contact incidents
+                        that are reported in each category and their respective location details, cause environment
+                        factors, incident causes and electrical contact types. </p>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <iframe frameborder="0" height="768" width=100% scrolling="yes"
+                                src="https://public.tableau.com/views/D1_Q1_Public/Dashboard2?:language=en&:display_count=y&publish=yes&:origin=viz_share_link&:showVizHome=no">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="groundFire" class="section-padding ground-bg">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Ground Fire Analysis</h2>
+                    <p>The below dashboard highlights the main factors correlated to incidents involving ground fire. It
+                        also indicates the difference in fire severities for different categories and the percentage of
+                        ground fire incidents caused by various factors. </p>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <iframe frameborder="0" height="850" width=100% scrolling="yes"
+                                src="https://public.tableau.com/views/Ques2Final_16001716259690/Dashboard3?:language=en&:display_count=y&publish=yes&:origin=viz_share_link&:showVizHome=no">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="injuries" class="section-padding gallery">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>General profile of injuires</h2>
+                    <p>The below dashboard highlights various types of injuries reported across areas in Victoria every
+                        year based on their severity. It also indicates the number of injuries reported in each category
+                        along with a detailed description of the injury.</p>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <iframe frameborder="0" height="768" width=100% scrolling="yes"
+                                src="https://public.tableau.com/views/D1_Q3_Varun/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link&:showVizHome=no">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+<!-- START SERVICES SECTION -->
+<section id="services" class="section-padding features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Tools & Technologies </span></h2>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><img class="img-responsive" src="assets/img/gallery/python-logo.png"
+                                                       alt="sample image"></div>
+                            <div class="col-md-8">
+                                <h4>Python<br/> <span>Flask</span></h4>
+                                <p>Flask is a micro web framework written in Python. It is classified as a
+                                    microframework because it does not require
+                                    particular tools or libraries. (Ref. Wikipedia)</p>
+                                <a class="btn3 m-b80" href="https://www.python.org/">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><img class="img-responsive" src="assets/img/gallery/tableau-logo.png"
+                                                       alt="sample image"></div>
+                            <div class="col-md-8">
+                                <h4>Tableau</h4>
+                                <p>Tableau is a visual analytics platform transforming the way we use data to solve
+                                    problems—empowering people and
+                                    organizations to make the most of their data. Tableau can help anyone see and
+                                    understand their data. (Ref.
+                                    https://www.tableau.com/why-tableau/what-is-tableau)</p>
+                                <a class="btn3 m-b80" href="https://www.tableau.com/">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><img class="img-responsive" src="assets/img/gallery/jupyter.png"
+                                                       alt="sample image"></div>
+                            <div class="col-md-8">
+                                <h4>Jupyter <br/> <span>Notebook</span></h4>
+                                <p>The Jupyter Notebook is an open-source web application that allows you to create and
+                                    share documents that contain live
+                                    code, equations, visualizations and narrative text. (Ref. https://jupyter.org/)</p>
+                                <a class="btn3" href="https://jupyter.org/">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><img class="img-responsive" src="assets/img/gallery/VS.png"
+                                                       alt="sample image"></div>
+                            <div class="col-md-8">
+                                <h4>Microsoft<br/> <span>Visual Studio</span></h4>
+                                <p>Microsoft Visual Studio is an integrated development environment from Microsoft. It
+                                    is used to develop computer
+                                    programs, as well as websites, web apps, web services and mobile apps. (Ref.
+                                    Wikipedia)</p>
+                                <a class="btn3" href="https://visualstudio.microsoft.com/">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><img class="img-responsive" src="assets/img/gallery/bitbucket.png"
+                                                       alt="sample image"></div>
+                            <div class="col-md-8">
+                                <h4>Bitbucket</h4>
+                                <p>Bitbucket is a web-based version control repository hosting service owned by
+                                    Atlassian, for source code and development
+                                    projects that use either Mercurial or Git revision control systems. Bitbucket offers
+                                    both commercial plans and free
+                                    accounts.(Ref. Wikipedia)</p>
+                                <a class="btn3"
+                                   href="https://bitbucket-students.deakin.edu.au/projects/D2IC-PG/repos/d2i---deakin-energy_2020t3/browse">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4"><img class="img-responsive" src="assets/img/gallery/sourcetree.png"
+                                                       alt="sample image">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>SourceTree <br/> <span>Git Client</span></h4>
+                                <p>Sourcetree is a free Git desktop client for developers on Windows. Say goodbye to the
+                                    command line and use the full
+                                    capabilities of Git through Sourcetree’s beautifully simple interface. (Ref.
+                                    https://www.atlassian.com/blog/archives/introducing-sourcetree-git-client-microsoft-windows)</p>
+                                <a class="btn3" href="https://www.sourcetreeapp.com/">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Trello" class="section-padding team-box">
+    <!--{% if scroll %}-->
+        <script>
+            document.location.hash = '#' + '{{ scroll }}';
+        </script>
+        <!--{% endif %}-->
+
+
+    <!-- START BLOG SECTION -->
+    <section id="team-section" class="section-padding blog">
+    <div class="title">
+            <h2>OUR <span>TEAM</span></h2>
+        </div>
+    </section>
+    <!-- START INCIDENT SECTION -->
+    <section id="AddIncident" class="section-padding team-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>INCIDENT FORM<span></span></h2>
+                        <p>Use the below form to add a new electrical incident that has been
+                            reported. </p>{{ message|safe }}
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <form name="ajax-form" id="incident-form1" action="/add_record" method="post"
+                                  class="contact-form">
+                                <div class="col-md-6">
+                                    <div class="contact-bg">
+                                        <input name="_redirect" type="hidden"
+                                               value="http://zcube.in/creativo/creativo/index.html">
+                                        <div class="form-group">
+                                            <input class="form-control" id="action" name="action"
+                                                   placeholder="ACTION TAKEN" type="text" value="" required>
+                                        </div>
+                                        <!-- /Form-Action taken -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="address" name="address" type="text"
+                                                   placeholder="ADDRESS" value="" required/>
+                                        </div>
+                                        <!-- /Form-Address -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="Assetlbl" name="Assetlbl" type="text"
+                                                   placeholder="ASSET LABEL" value="" required>
+                                        </div>
+                                        <!-- /Form-Asset Label -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="causecmnty" name="causecmnty" rows="1"
+                                                   placeholder="CAUSE COMMUNITY">
+                                        </div>
+                                        <!-- /Form-Cause community -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="causeenv" name="causeenv" rows="1"
+                                                   placeholder="CAUSE ENVIRONMENT">
+                                        </div>
+                                        <!-- /Form-Event Discription -->
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="eventDesc" rows="2" cols="50"
+                                                      name="eventDesc" type="text" placeholder="EVENT DESCRIPTION"
+                                                      required></textarea>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-bg">
+                                        <!-- form -->
+                                        <!--<form name="ajax-form" id="contact-form2" action="https://formsubmit.io/send/90aa5128-c301-47bf-ae81-794fa4c07dda" method="post"  class="contact-form">-->
+                                        <input name="_redirect" type="hidden"
+                                               value="http://zcube.in/creativo/creativo/index.html">
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="eventID" type="number" name="eventID" rows="1"
+                                                   placeholder="EVENT ID" required>
+                                        </div>
+                                        <!-- /Form-EVENT ID -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="date" name="date" rows="1"
+                                                   placeholder="EVENT DATE" type="text" onfocus="(this.type='date')"
+                                                   value="" min="2000-01-01" max="2049-12-31" required>
+                                        </div>
+                                        <!-- /Form-Incident Date -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="techcause" name="techcause" rows="1"
+                                                   placeholder="CAUSE TECHNICAL">
+                                        </div>
+                                        <!-- /Form-Technical cause -->
+
+                                        <div class="form-group">
+                                            <select class="form-control" id="causeworkp" name="causeworkp" rows="1"
+                                                    placeholder="Cause work practice" required>
+                                                <option value="" selected disabled hidden>Cause work practice</option>
+                                                <option value="Poor workmanship">Poor workmanship</option>
+                                                <option value="Ineffective planning">Ineffective planning</option>
+                                                <option value="Followed but inappropriate">Followed but inappropriate
+                                                </option>
+                                                <option value="Poor or no communication">Poor or no communication
+                                                </option>
+                                                <option value="Human error">Human error</option>
+                                                <option value="Not applicable">Not applicable</option>
+                                                <option value="Unknown">Unknown</option>
+                                            </select>
+                                        </div>
+                                        <!-- /Form-Cause work practices -->
+
+                                        <div class="form-group">
+                                            <select class="form-control" id="cnttype" name="cnttype" rows="1"
+                                                    placeholder="Contact type">
+                                                <option value="" selected disabled hidden>Contact type</option>
+                                                <option value="Three phase">Three phase</option>
+                                                <option value="Phase to phase">Phase to phase</option>
+                                                <option value="Phase to earth">Phase to earth</option>
+                                                <option value="Phase to neutral">Phase to neutral</option>
+                                                <option value="Neutral to earth">Neutral to earth</option>
+                                                <option value="Not applicable">Not applicable</option>
+                                            </select>
+                                        </div>
+                                        <!-- /Form-Contact type -->
+
+                                        <!-- /Form-Injury type -->
+                                        <div class="form-group">
+                                            <select class="form-control" id="injtype" name="injtype" rows="1"
+                                                    placeholder="Injury type" required>
+                                                <option value="" selected disabled hidden>Injury type</option>
+                                                <option value="None">None</option>
+                                                <option value="Fatal">Fatal</option>
+                                                <option value="Major">Major</option>
+                                                <option value="Minor">Minor</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="pcode" type="number" name="pcode" rows="1"
+                                                   placeholder="POST CODE" type="text" required>
+                                        </div>
+                                        <!-- /Form-post code -->
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="loc" name="loc" rows="1"
+                                                   placeholder="LOCATION" type="text" required>
+                                        </div>
+                                        <!-- /Form-location -->
+
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-custom" id="send">Submit
+                                                    </button>
+                                                </div>
+                                            </div> <!-- /col -->
+                                        </div> <!-- /row -->
+                                    </div>
+                                </div>
+                            </form> <!-- /form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- START CLIENTS LOGO SECTION -->
+    <section class="section-padding client padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pnd">
+                    <ul>
+                        <li><a href="#"><img src="assets/img/DeakinEnergy.jpg" alt="client1"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top" id="back-to-top"> <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </a>
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!-- baguetteBox -->
+    <script src="assets/js/baguetteBox.js" async></script>
+    <script src="assets/js/plugins.js" async></script>
+    <!--  Custom Theme JavaScript  -->
+    <script src="assets/js/custom.js"></script>
+    <!--  Custom Theme filterizr  -->
+    <script src="assets/js/jquery.filterizr.js"></script>
+    <script src="assets/js/controls.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function () {
+            //Initialize filterizr with default options
+            $('.filtr-container').filterizr();
+        });
+    </script>
+    <footer class="footer-distributed">
+        <div class="footer-center>
+            <img src="img/logo.png">
+            <p class="footer-company-name">© 2020 Energy Safe Victoria</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>&nbsp;<span> 309 - Energy Safe Victoria Head Office
+                Bldg. No. A - 1, Sector - 1</span>
+						Albert park Street, City of Melbourne, VIC - 3004
+            </div>
+            <div>
+					<i class="fa fa-phone"></i>&nbsp;<span> +61 22-276892</span>
+
+
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>&nbsp;<a href="mailto:support@energysafe.com">support@energysafe.com</a>
+				</div>
+			</div>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
+

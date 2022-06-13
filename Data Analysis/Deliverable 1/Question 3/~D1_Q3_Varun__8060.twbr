@@ -1,0 +1,2879 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0721.1350                               -->
+<workbook source-build='2020.2.4 (20202.20.0721.1350)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='D1_Q3_Varun_Public' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='all'>
+      <format attr='color' value='#b4b4b4' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='filtered20 (filtered20)' inline='true' name='federated.15ecno20s1f1e118lopfv1qi0wt9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='filtered20' name='excel-direct.1vjr0bh0mggzog1cp1t6t0zdztnr'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Users/Varun/Varun/D1_Q3_cleaned_Maneesh.xls' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1vjr0bh0mggzog1cp1t6t0zdztnr' name='filtered20' table='[filtered20$]' type='table'>
+          <columns gridOrigin='A1:AO33:no:A1:AO33:0' header='yes' outcome='2'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='ActionTaken' ordinal='1' />
+            <column datatype='string' name='Address' ordinal='2' />
+            <column datatype='string' name='AssetLabel' ordinal='3' />
+            <column datatype='string' name='CauseCommunity' ordinal='4' />
+            <column datatype='string' name='CauseEnvironment' ordinal='5' />
+            <column datatype='string' name='CausePre' ordinal='6' />
+            <column datatype='string' name='CauseTechnical' ordinal='7' />
+            <column datatype='string' name='CauseWorkP' ordinal='8' />
+            <column datatype='string' name='ContactType' ordinal='9' />
+            <column datatype='integer' name='CorrectProtection' ordinal='10' />
+            <column datatype='string' name='EventDescription' ordinal='11' />
+            <column datatype='string' name='FailedAssets' ordinal='12' />
+            <column datatype='integer' name='FailedExplosion' ordinal='13' />
+            <column datatype='integer' name='FailedOilFilled' ordinal='14' />
+            <column datatype='integer' name='FailedOtherAssets' ordinal='15' />
+            <column datatype='string' name='FailedOtherAssetsOther' ordinal='16' />
+            <column datatype='string' name='FeederNumber' ordinal='17' />
+            <column datatype='string' name='IncidentCause' ordinal='18' />
+            <column datatype='string' name='IncidentConsequence' ordinal='19' />
+            <column datatype='datetime' name='IncidentDatetime' ordinal='20' />
+            <column datatype='integer' name='IncidentFireFFactorReportable' ordinal='21' />
+            <column datatype='string' name='IncidentFireSeverity' ordinal='22' />
+            <column datatype='integer' name='IncidentID' ordinal='23' />
+            <column datatype='string' name='IncidentLocationType' ordinal='24' />
+            <column datatype='string' name='IncidentLocationTypeOther' ordinal='25' />
+            <column datatype='string' name='IncidentNumber' ordinal='26' />
+            <column datatype='string' name='IncidentType' ordinal='27' />
+            <column datatype='real' name='Lat' ordinal='28' />
+            <column datatype='real' name='Long' ordinal='29' />
+            <column datatype='integer' name='MadeSafe' ordinal='30' />
+            <column datatype='string' name='NetworkType' ordinal='31' />
+            <column datatype='string' name='Status' ordinal='32' />
+            <column datatype='integer' name='SubmissionID' ordinal='33' />
+            <column datatype='datetime' name='SubmittedDateTimeString' ordinal='34' />
+            <column datatype='string' name='Voltage' ordinal='35' />
+            <column datatype='string' name='WeatherStation' ordinal='36' />
+            <column datatype='integer' name='Postcode' ordinal='37' />
+            <column datatype='string' name='Locality' ordinal='38' />
+            <column datatype='string' name='Category' ordinal='39' />
+            <column datatype='string' name='InjuryType' ordinal='40' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.1vjr0bh0mggzog1cp1t6t0zdztnr' name='filtered20' table='[filtered20$]' type='table'>
+          <columns gridOrigin='A1:AO33:no:A1:AO33:0' header='yes' outcome='2'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='ActionTaken' ordinal='1' />
+            <column datatype='string' name='Address' ordinal='2' />
+            <column datatype='string' name='AssetLabel' ordinal='3' />
+            <column datatype='string' name='CauseCommunity' ordinal='4' />
+            <column datatype='string' name='CauseEnvironment' ordinal='5' />
+            <column datatype='string' name='CausePre' ordinal='6' />
+            <column datatype='string' name='CauseTechnical' ordinal='7' />
+            <column datatype='string' name='CauseWorkP' ordinal='8' />
+            <column datatype='string' name='ContactType' ordinal='9' />
+            <column datatype='integer' name='CorrectProtection' ordinal='10' />
+            <column datatype='string' name='EventDescription' ordinal='11' />
+            <column datatype='string' name='FailedAssets' ordinal='12' />
+            <column datatype='integer' name='FailedExplosion' ordinal='13' />
+            <column datatype='integer' name='FailedOilFilled' ordinal='14' />
+            <column datatype='integer' name='FailedOtherAssets' ordinal='15' />
+            <column datatype='string' name='FailedOtherAssetsOther' ordinal='16' />
+            <column datatype='string' name='FeederNumber' ordinal='17' />
+            <column datatype='string' name='IncidentCause' ordinal='18' />
+            <column datatype='string' name='IncidentConsequence' ordinal='19' />
+            <column datatype='datetime' name='IncidentDatetime' ordinal='20' />
+            <column datatype='integer' name='IncidentFireFFactorReportable' ordinal='21' />
+            <column datatype='string' name='IncidentFireSeverity' ordinal='22' />
+            <column datatype='integer' name='IncidentID' ordinal='23' />
+            <column datatype='string' name='IncidentLocationType' ordinal='24' />
+            <column datatype='string' name='IncidentLocationTypeOther' ordinal='25' />
+            <column datatype='string' name='IncidentNumber' ordinal='26' />
+            <column datatype='string' name='IncidentType' ordinal='27' />
+            <column datatype='real' name='Lat' ordinal='28' />
+            <column datatype='real' name='Long' ordinal='29' />
+            <column datatype='integer' name='MadeSafe' ordinal='30' />
+            <column datatype='string' name='NetworkType' ordinal='31' />
+            <column datatype='string' name='Status' ordinal='32' />
+            <column datatype='integer' name='SubmissionID' ordinal='33' />
+            <column datatype='datetime' name='SubmittedDateTimeString' ordinal='34' />
+            <column datatype='string' name='Voltage' ordinal='35' />
+            <column datatype='string' name='WeatherStation' ordinal='36' />
+            <column datatype='integer' name='Postcode' ordinal='37' />
+            <column datatype='string' name='Locality' ordinal='38' />
+            <column datatype='string' name='Category' ordinal='39' />
+            <column datatype='string' name='InjuryType' ordinal='40' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AO33:no:A1:AO33:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ActionTaken</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ActionTaken]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>ActionTaken</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Address]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Address</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AssetLabel</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AssetLabel]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>AssetLabel</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CauseCommunity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CauseCommunity]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>CauseCommunity</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CauseEnvironment</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CauseEnvironment]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>CauseEnvironment</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CausePre</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CausePre]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>CausePre</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CauseTechnical</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CauseTechnical]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>CauseTechnical</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CauseWorkP</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CauseWorkP]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>CauseWorkP</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ContactType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ContactType]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>ContactType</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CorrectProtection</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CorrectProtection]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>CorrectProtection</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EventDescription</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[EventDescription]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>EventDescription</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FailedAssets</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[FailedAssets]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>FailedAssets</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FailedExplosion</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FailedExplosion]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>FailedExplosion</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FailedOilFilled</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FailedOilFilled]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>FailedOilFilled</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FailedOtherAssets</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FailedOtherAssets]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>FailedOtherAssets</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FailedOtherAssetsOther</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[FailedOtherAssetsOther]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>FailedOtherAssetsOther</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FeederNumber</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[FeederNumber]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>FeederNumber</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentCause</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentCause]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentCause</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentConsequence</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentConsequence]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentConsequence</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentDatetime</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[IncidentDatetime]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentDatetime</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentFireFFactorReportable</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IncidentFireFFactorReportable]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentFireFFactorReportable</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentFireSeverity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentFireSeverity]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentFireSeverity</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IncidentID]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentID</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentLocationType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentLocationType]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentLocationType</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentLocationTypeOther</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentLocationTypeOther]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentLocationTypeOther</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentNumber</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentNumber]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentNumber</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncidentType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IncidentType]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>IncidentType</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lat]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Lat</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Long</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Long]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Long</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MadeSafe</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MadeSafe]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>MadeSafe</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NetworkType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[NetworkType]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>NetworkType</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SubmissionID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SubmissionID]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>SubmissionID</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SubmittedDateTimeString</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[SubmittedDateTimeString]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>SubmittedDateTimeString</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Voltage</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Voltage]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Voltage</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WeatherStation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[WeatherStation]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>WeatherStation</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postcode]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Postcode</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Locality</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Locality]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Locality</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InjuryType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[InjuryType]</local-name>
+            <parent-name>[filtered20]</parent-name>
+            <remote-alias>InjuryType</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Action Taken' datatype='string' name='[ActionTaken]' role='dimension' type='nominal' />
+      <column caption='Asset Label' datatype='string' name='[AssetLabel]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column caption='Cause Community' datatype='string' name='[CauseCommunity]' role='dimension' type='nominal' />
+      <column caption='Cause Environment' datatype='string' name='[CauseEnvironment]' role='dimension' type='nominal' />
+      <column caption='Cause Pre' datatype='string' name='[CausePre]' role='dimension' type='nominal' />
+      <column caption='Cause Technical' datatype='string' name='[CauseTechnical]' role='dimension' type='nominal' />
+      <column caption='Cause Work P' datatype='string' name='[CauseWorkP]' role='dimension' type='nominal' />
+      <column caption='Contact Type' datatype='string' name='[ContactType]' role='dimension' type='nominal' />
+      <column caption='Correct Protection' datatype='integer' name='[CorrectProtection]' role='measure' type='quantitative' />
+      <column caption='Event Description' datatype='string' name='[EventDescription]' role='dimension' type='nominal' />
+      <column caption='Failed Assets' datatype='string' name='[FailedAssets]' role='dimension' type='nominal' />
+      <column caption='Failed Explosion' datatype='integer' name='[FailedExplosion]' role='measure' type='quantitative' />
+      <column caption='Failed Oil Filled' datatype='integer' name='[FailedOilFilled]' role='measure' type='quantitative' />
+      <column caption='Failed Other Assets Other' datatype='string' name='[FailedOtherAssetsOther]' role='dimension' type='nominal' />
+      <column caption='Failed Other Assets' datatype='integer' name='[FailedOtherAssets]' role='measure' type='quantitative' />
+      <column caption='Feeder Number' datatype='string' name='[FeederNumber]' role='dimension' type='nominal' />
+      <column caption='Incident Cause' datatype='string' name='[IncidentCause]' role='dimension' type='nominal' />
+      <column caption='Incident Consequence' datatype='string' name='[IncidentConsequence]' role='dimension' type='nominal' />
+      <column caption='Incident Datetime' datatype='datetime' name='[IncidentDatetime]' role='dimension' type='ordinal' />
+      <column caption='Incident Fire F Factor Reportable' datatype='integer' name='[IncidentFireFFactorReportable]' role='measure' type='quantitative' />
+      <column caption='Incident Fire Severity' datatype='string' name='[IncidentFireSeverity]' role='dimension' type='nominal' />
+      <column caption='Incident ID' datatype='integer' name='[IncidentID]' role='dimension' type='ordinal' />
+      <column caption='Incident Location Type Other' datatype='string' name='[IncidentLocationTypeOther]' role='dimension' type='nominal' />
+      <column caption='Incident Location Type' datatype='string' name='[IncidentLocationType]' role='dimension' type='nominal' />
+      <column caption='Incident Number' datatype='string' name='[IncidentNumber]' role='dimension' type='nominal' />
+      <column caption='Incident Type' datatype='string' name='[IncidentType]' role='dimension' type='nominal' />
+      <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column datatype='string' name='[Locality (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Locality]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot;Inglewood&quot;'>
+            <value>&quot;Inglewood&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Locality]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Made Safe' datatype='integer' name='[MadeSafe]' role='measure' type='quantitative' />
+      <column caption='Network Type' datatype='string' name='[NetworkType]' role='dimension' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Submission ID' datatype='integer' name='[SubmissionID]' role='dimension' type='ordinal' />
+      <column caption='Submitted Date Time String' datatype='datetime' name='[SubmittedDateTimeString]' role='dimension' type='ordinal' />
+      <column caption='Weather Station' datatype='string' name='[WeatherStation]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='filtered20' datatype='table' name='[__tableau_internal_object_id__].[filtered20_89CAC7E847AE497CB8491B3BD34E57E4]' role='measure' type='quantitative' />
+      <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[IncidentLocationType]' derivation='None' name='[none:IncidentLocationType:nk]' pivot='key' type='nominal' />
+      <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Postcode]' derivation='None' name='[none:Postcode:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Category,Incident Cause)' hidden='true' name='[Action (Category,Incident Cause)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Category]' />
+          <groupfilter function='level-members' level='[IncidentCause]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Category,Injury Type)' hidden='true' name='[Action (Category,Injury Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Category]' />
+          <groupfilter function='level-members' level='[InjuryType]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Incident Location Type,Injury Type)' hidden='true' name='[Action (Incident Location Type,Injury Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[IncidentLocationType]' />
+          <groupfilter function='level-members' level='[InjuryType]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Injury Type,Locality,Postcode)' hidden='true' name='[Action (Injury Type,Locality,Postcode)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[InjuryType]' />
+          <groupfilter function='level-members' level='[Locality]' />
+          <groupfilter function='level-members' level='[Postcode]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='D:/Users/Varun/Varun/SIT764/filtered20 (filtered20).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ActionTaken</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ActionTaken]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ActionTaken</remote-alias>
+              <ordinal>1</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Address</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Address]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Address</remote-alias>
+              <ordinal>2</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AssetLabel</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AssetLabel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AssetLabel</remote-alias>
+              <ordinal>3</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CauseCommunity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CauseCommunity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CauseCommunity</remote-alias>
+              <ordinal>4</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CauseEnvironment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CauseEnvironment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CauseEnvironment</remote-alias>
+              <ordinal>5</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CausePre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CausePre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CausePre</remote-alias>
+              <ordinal>6</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CauseTechnical</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CauseTechnical]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CauseTechnical</remote-alias>
+              <ordinal>7</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CauseWorkP</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CauseWorkP]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CauseWorkP</remote-alias>
+              <ordinal>8</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ContactType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ContactType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ContactType</remote-alias>
+              <ordinal>9</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CorrectProtection</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[CorrectProtection]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CorrectProtection</remote-alias>
+              <ordinal>10</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EventDescription</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EventDescription]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EventDescription</remote-alias>
+              <ordinal>11</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FailedAssets</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[FailedAssets]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FailedAssets</remote-alias>
+              <ordinal>12</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FailedExplosion</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FailedExplosion]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FailedExplosion</remote-alias>
+              <ordinal>13</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FailedOilFilled</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FailedOilFilled]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FailedOilFilled</remote-alias>
+              <ordinal>14</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FailedOtherAssets</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FailedOtherAssets]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FailedOtherAssets</remote-alias>
+              <ordinal>15</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FailedOtherAssetsOther</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[FailedOtherAssetsOther]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FailedOtherAssetsOther</remote-alias>
+              <ordinal>16</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FeederNumber</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[FeederNumber]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FeederNumber</remote-alias>
+              <ordinal>17</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentCause</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentCause]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentCause</remote-alias>
+              <ordinal>18</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentConsequence</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentConsequence]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentConsequence</remote-alias>
+              <ordinal>19</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentDatetime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[IncidentDatetime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentDatetime</remote-alias>
+              <ordinal>20</ordinal>
+              <family>filtered20</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentFireFFactorReportable</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[IncidentFireFFactorReportable]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentFireFFactorReportable</remote-alias>
+              <ordinal>21</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentFireSeverity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentFireSeverity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentFireSeverity</remote-alias>
+              <ordinal>22</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[IncidentID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentID</remote-alias>
+              <ordinal>23</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentLocationType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentLocationType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentLocationType</remote-alias>
+              <ordinal>24</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentLocationTypeOther</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentLocationTypeOther]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentLocationTypeOther</remote-alias>
+              <ordinal>25</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentNumber</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentNumber]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentNumber</remote-alias>
+              <ordinal>26</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncidentType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[IncidentType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IncidentType</remote-alias>
+              <ordinal>27</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lat</remote-alias>
+              <ordinal>28</ordinal>
+              <family>filtered20</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Long</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Long]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Long</remote-alias>
+              <ordinal>29</ordinal>
+              <family>filtered20</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MadeSafe</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MadeSafe]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MadeSafe</remote-alias>
+              <ordinal>30</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NetworkType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[NetworkType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NetworkType</remote-alias>
+              <ordinal>31</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Status</remote-alias>
+              <ordinal>32</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SubmissionID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SubmissionID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SubmissionID</remote-alias>
+              <ordinal>33</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SubmittedDateTimeString</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[SubmittedDateTimeString]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SubmittedDateTimeString</remote-alias>
+              <ordinal>34</ordinal>
+              <family>filtered20</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Voltage</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Voltage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Voltage</remote-alias>
+              <ordinal>35</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WeatherStation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[WeatherStation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>WeatherStation</remote-alias>
+              <ordinal>36</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Postcode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Postcode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Postcode</remote-alias>
+              <ordinal>37</ordinal>
+              <family>filtered20</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Locality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Locality]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Locality</remote-alias>
+              <ordinal>38</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>39</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>InjuryType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[InjuryType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>InjuryType</remote-alias>
+              <ordinal>40</ordinal>
+              <family>filtered20</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Postcode:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>3104</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>3956</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>3012</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>3429</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>3032</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>3833</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>3195</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>3105</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>3992</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>3038</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>3925</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>3363</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>3019</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>3505</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>3517</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>3240</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>3048</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>3938</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>3207</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>3222</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>3340</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>3364</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3145</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>3064</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>3943</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>3028</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>3634</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>3223</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>3150</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3030</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3750</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:IncidentLocationType:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Residential&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Construction&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Commercial&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Roadway&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Agricultural&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;AF Other&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Trees&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Vehicle&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;OH Cable&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;UG Cable&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Connection&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Forecast Indicator:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Actual&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Estimate&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:InjuryType:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Fatal&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Minor&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Major&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='filtered20' id='filtered20_89CAC7E847AE497CB8491B3BD34E57E4'>
+            <properties context=''>
+              <relation connection='excel-direct.1vjr0bh0mggzog1cp1t6t0zdztnr' name='filtered20' table='[filtered20$]' type='table'>
+                <columns gridOrigin='A1:AO33:no:A1:AO33:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='ActionTaken' ordinal='1' />
+                  <column datatype='string' name='Address' ordinal='2' />
+                  <column datatype='string' name='AssetLabel' ordinal='3' />
+                  <column datatype='string' name='CauseCommunity' ordinal='4' />
+                  <column datatype='string' name='CauseEnvironment' ordinal='5' />
+                  <column datatype='string' name='CausePre' ordinal='6' />
+                  <column datatype='string' name='CauseTechnical' ordinal='7' />
+                  <column datatype='string' name='CauseWorkP' ordinal='8' />
+                  <column datatype='string' name='ContactType' ordinal='9' />
+                  <column datatype='integer' name='CorrectProtection' ordinal='10' />
+                  <column datatype='string' name='EventDescription' ordinal='11' />
+                  <column datatype='string' name='FailedAssets' ordinal='12' />
+                  <column datatype='integer' name='FailedExplosion' ordinal='13' />
+                  <column datatype='integer' name='FailedOilFilled' ordinal='14' />
+                  <column datatype='integer' name='FailedOtherAssets' ordinal='15' />
+                  <column datatype='string' name='FailedOtherAssetsOther' ordinal='16' />
+                  <column datatype='string' name='FeederNumber' ordinal='17' />
+                  <column datatype='string' name='IncidentCause' ordinal='18' />
+                  <column datatype='string' name='IncidentConsequence' ordinal='19' />
+                  <column datatype='datetime' name='IncidentDatetime' ordinal='20' />
+                  <column datatype='integer' name='IncidentFireFFactorReportable' ordinal='21' />
+                  <column datatype='string' name='IncidentFireSeverity' ordinal='22' />
+                  <column datatype='integer' name='IncidentID' ordinal='23' />
+                  <column datatype='string' name='IncidentLocationType' ordinal='24' />
+                  <column datatype='string' name='IncidentLocationTypeOther' ordinal='25' />
+                  <column datatype='string' name='IncidentNumber' ordinal='26' />
+                  <column datatype='string' name='IncidentType' ordinal='27' />
+                  <column datatype='real' name='Lat' ordinal='28' />
+                  <column datatype='real' name='Long' ordinal='29' />
+                  <column datatype='integer' name='MadeSafe' ordinal='30' />
+                  <column datatype='string' name='NetworkType' ordinal='31' />
+                  <column datatype='string' name='Status' ordinal='32' />
+                  <column datatype='integer' name='SubmissionID' ordinal='33' />
+                  <column datatype='datetime' name='SubmittedDateTimeString' ordinal='34' />
+                  <column datatype='string' name='Voltage' ordinal='35' />
+                  <column datatype='string' name='WeatherStation' ordinal='36' />
+                  <column datatype='integer' name='Postcode' ordinal='37' />
+                  <column datatype='string' name='Locality' ordinal='38' />
+                  <column datatype='string' name='Category' ordinal='39' />
+                  <column datatype='string' name='InjuryType' ordinal='40' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 4' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 2' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 7' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InjuryType]' derivation='Count' name='[pcto:cnt:InjuryType:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.15ecno20s1f1e118lopfv1qi0wt9].[pcto:cnt:InjuryType:qk:1]</rows>
+        <cols>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</cols>
+      </table>
+      <simple-id uuid='{8CC67EC6-12E0-47B5-B64E-50E044B83C7F}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Injury Type vs Category&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Incident Cause' datatype='string' name='[IncidentCause]' role='dimension' type='nominal' />
+            <column caption='Incident Location Type' datatype='string' name='[IncidentLocationType]' role='dimension' type='nominal' />
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Locality]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[InjuryType]' derivation='Count' name='[cnt:InjuryType:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Incident Cause)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[IncidentCause]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Incident Location Type,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[IncidentLocationType]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Injury Type,Locality,Postcode)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[InjuryType]' />
+              <groupfilter function='level-members' level='[Locality]' />
+              <groupfilter function='level-members' level='[Postcode]' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Vehicle&quot;</bucket>
+              <bucket>&quot;Other&quot;</bucket>
+              <bucket>&quot;Connection&quot;</bucket>
+              <bucket>&quot;Trees&quot;</bucket>
+              <bucket>&quot;OH Cable&quot;</bucket>
+              <bucket>&quot;AF Other&quot;</bucket>
+              <bucket>&quot;UG Cable&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Incident Location Type,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Injury Type,Locality,Postcode)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Incident Cause)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</rows>
+        <cols>([federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk] / [federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk])</cols>
+        <mark-labels>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>6</value>
+                <value>&quot;Other&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>6</value>
+                <value>&quot;Connection&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2</value>
+                <value>&quot;Trees&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2</value>
+                <value>&quot;OH Cable&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2</value>
+                <value>&quot;AF Other&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>&quot;UG Cable&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='16' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3</value>
+                <value>&quot;Vehicle&quot;</value>
+                <value>&quot;Minor&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='17' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>&quot;Other&quot;</value>
+                <value>&quot;Minor&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='18' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>6</value>
+                <value>&quot;Vehicle&quot;</value>
+                <value>&quot;Fatal&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='19' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</field>
+                  <field>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3</value>
+                <value>&quot;Vehicle&quot;</value>
+                <value>&quot;Major&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{B9AA462A-2D61-46A3-B0CD-76A16475F588}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[Lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[Lat]' derivation='Avg' name='[avg:Lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Long]' derivation='Avg' name='[avg:Long:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[InjuryType]' derivation='Count' name='[cum:cnt:InjuryType:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Postcode]' ordering-type='Field' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Postcode]' derivation='None' name='[none:Postcode:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Postcode:ok]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[cum:cnt:InjuryType:qk]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[avg:Lat:qk]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[avg:Long:qk]' />
+              <geometry column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.15ecno20s1f1e118lopfv1qi0wt9].[avg:Lat:qk]</rows>
+        <cols>([federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk] * [federated.15ecno20s1f1e118lopfv1qi0wt9].[avg:Long:qk])</cols>
+      </table>
+      <simple-id uuid='{D2A0CC50-A1E7-4551-8C33-39B6B1C88996}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Count of Injury type per category of incident cause</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Incident Cause' datatype='string' name='[IncidentCause]' role='dimension' type='nominal' />
+            <column caption='Incident Location Type' datatype='string' name='[IncidentLocationType]' role='dimension' type='nominal' />
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Locality]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[InjuryType]' derivation='Count' name='[cnt:InjuryType:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[IncidentCause]' derivation='None' name='[none:IncidentCause:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Incident Location Type,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[IncidentLocationType]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Injury Type,Locality,Postcode)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[InjuryType]' />
+              <groupfilter function='level-members' level='[Locality]' />
+              <groupfilter function='level-members' level='[Postcode]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Incident Location Type,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Injury Type,Locality,Postcode)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='114' />
+            <format attr='cell-h' value='38' />
+            <format attr='cell' value='38' />
+            <format attr='cell-q' value='190' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' scope='cols' value='#000000' />
+            <format attr='background-color' scope='rows' value='#000000' />
+            <format attr='background-color' field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:IncidentCause:nk]' value='#000000' />
+            <format attr='background-color' data-class='subtotal' value='#000000' />
+            <format attr='band-color' scope='rows' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#b4b4b4' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#000000' />
+            <format attr='band-color' scope='rows' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[cnt:InjuryType:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk] / [federated.15ecno20s1f1e118lopfv1qi0wt9].[none:IncidentCause:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{1064A2C4-9B94-4E65-A8D3-160CEFE5DC7B}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Count of Injury type per location type
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Incident Location Type' datatype='string' name='[IncidentLocationType]' role='dimension' type='nominal' />
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Locality]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[IncidentLocationType]' derivation='None' name='[none:IncidentLocationType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InjuryType]' derivation='Count' name='[pcto:cnt:InjuryType:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Injury Type,Locality,Postcode)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[InjuryType]' />
+              <groupfilter function='level-members' level='[Locality]' />
+              <groupfilter function='level-members' level='[Postcode]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]'>
+            <groupfilter function='level-members' level='[none:Category:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Injury Type,Locality,Postcode)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:IncidentLocationType:nk]' value='40' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:IncidentLocationType:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15ecno20s1f1e118lopfv1qi0wt9].[pcto:cnt:InjuryType:qk]</rows>
+        <cols>([federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk] / [federated.15ecno20s1f1e118lopfv1qi0wt9].[none:IncidentLocationType:nk])</cols>
+        <percentages enabled='true' mode='row' />
+      </table>
+      <simple-id uuid='{E7ABC386-1759-4121-AAF0-04CB070DB7F7}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Incidents per year and its Forecast
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Incident Cause' datatype='string' name='[IncidentCause]' role='dimension' type='nominal' />
+            <column caption='Incident Datetime' datatype='datetime' name='[IncidentDatetime]' role='dimension' type='ordinal' />
+            <column caption='Incident Type' datatype='string' name='[IncidentType]' role='dimension' type='nominal' />
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column-instance column='[IncidentType]' derivation='Count' name='[cnt:IncidentType:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[IncidentType]' derivation='Count' forecast-column-base='[cnt:IncidentType:qk]' forecast-column-type='forecast-value' name='[fVal:cnt:IncidentType:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[IncidentDatetime]' derivation='Year' name='[yr:IncidentDatetime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Incident Cause)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[IncidentCause]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]'>
+            <groupfilter function='level-members' level='[none:InjuryType:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Incident Cause)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' scope='cols' value='#000000' />
+            <format attr='background-color' field='[federated.15ecno20s1f1e118lopfv1qi0wt9].[fVal:cnt:IncidentType:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#d3b348' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15ecno20s1f1e118lopfv1qi0wt9].[fVal:cnt:IncidentType:qk]</rows>
+        <cols>[federated.15ecno20s1f1e118lopfv1qi0wt9].[yr:IncidentDatetime:ok]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-periods='Year-Trunc' range-size='3' range-type='next' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{0B2A4E76-795B-40F6-A80A-BEEF9AB4BB3F}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Locations with Injury Type and Injury Count</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Incident Cause' datatype='string' name='[IncidentCause]' role='dimension' type='nominal' />
+            <column caption='Incident Location Type' datatype='string' name='[IncidentLocationType]' role='dimension' type='nominal' />
+            <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Locality]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Locality]' derivation='None' name='[none:Locality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Postcode]' derivation='None' name='[none:Postcode:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[InjuryType]' derivation='Count' name='[pcto:cnt:InjuryType:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Incident Cause)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[IncidentCause]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Incident Location Type,Injury Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[IncidentLocationType]' />
+              <groupfilter function='level-members' level='[InjuryType]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]'>
+            <groupfilter function='level-members' level='[none:InjuryType:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Incident Location Type,Injury Type)]</column>
+            <column>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Action (Category,Incident Cause)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='dark' />
+            <format attr='wrap' value='false' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[pcto:cnt:InjuryType:qk]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Locality:nk]' />
+              <lod column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Postcode:ok]' />
+              <geometry column='[federated.15ecno20s1f1e118lopfv1qi0wt9].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f1ce63' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Latitude (generated)]</rows>
+        <cols>[federated.15ecno20s1f1e118lopfv1qi0wt9].[Longitude (generated)]</cols>
+        <percentages enabled='true' mode='row' />
+      </table>
+      <simple-id uuid='{8FC59391-7257-426E-A420-94B96197F660}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>General Profile of Injuries per category of Incidents</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#000000' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='filtered20 (filtered20)' name='federated.15ecno20s1f1e118lopfv1qi0wt9' />
+      </datasources>
+      <datasource-dependencies datasource='federated.15ecno20s1f1e118lopfv1qi0wt9'>
+        <column caption='Injury Type' datatype='string' name='[InjuryType]' role='dimension' type='nominal' />
+        <column-instance column='[InjuryType]' derivation='None' name='[none:InjuryType:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='29' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98044' id='32' param='vert' w='99002' x='499' y='978'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='7090' id='33' w='99002' x='499' y='978'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='90954' id='30' w='99002' x='499' y='8068' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='42910' id='3' name='Sheet 2' w='61097' x='38030' y='10147' />
+        <zone h='44377' id='6' name='Sheet 4' w='38092' x='374' y='8924' />
+        <zone h='49500' id='7' name='Sheet 7' w='58000' x='200' y='51500' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='17482' id='8' name='Sheet 7' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' w='15960' x='80362' y='51345' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='12625' id='9' name='Sheet 7' pane-specification-id='0' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' w='14000' x='100' y='84875' />
+        <zone h='36250' id='10' name='Sheet 6' w='39400' x='58800' y='64000' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='11500' id='12' name='Sheet 6' pane-specification-id='2' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Forecast Indicator:nk]' w='17400' x='58800' y='53875' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true'>General Profile of Injuries per category of Incidents</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='53' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98044' id='52' param='vert' w='99002' x='499' y='978'>
+                <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='7090' id='33' w='99002' x='499' y='978'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44377' id='6' is-fixed='true' name='Sheet 4' w='38092' x='374' y='8924'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42910' id='3' is-fixed='true' name='Sheet 2' w='61097' x='38030' y='10147'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='17482' id='8' mode='checkdropdown' name='Sheet 7' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' w='15960' x='80362' y='51345'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49500' id='7' is-fixed='true' name='Sheet 7' w='58000' x='200' y='51500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='12625' id='9' name='Sheet 7' pane-specification-id='0' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' w='14000' x='100' y='84875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36250' id='10' is-fixed='true' name='Sheet 6' w='39400' x='58800' y='64000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='11500' id='12' name='Sheet 6' pane-specification-id='2' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Forecast Indicator:nk]' w='17400' x='58800' y='53875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{75E01FE1-E54E-47ED-8CD5-4507F6CC3273}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='33'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F10C148B-D78C-4381-8ABA-C167F79032FF}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{10C3933B-3557-4BFA-BA1B-F28BF751C30E}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CEEC8054-FD3F-4AD4-A5A3-9E12EE25592F}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B8787EDC-BD89-42ED-A189-9B24B531F6E4}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Category:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:IncidentLocationType:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{91C65D2B-88BF-4100-908D-8530713CAB4E}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' type='filter' />
+            <card pane-specification-id='2' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1F117640-053D-4738-9DBE-574585BC7A6B}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.15ecno20s1f1e118lopfv1qi0wt9].[none:InjuryType:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{46FCA503-4AA2-44AD-9302-7906FD2F9D27}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4' />
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{5A30AB94-73EE-44E5-88C1-9012477A49F6}' />
+    </window>
+  </windows>
+</workbook>

@@ -1,0 +1,38 @@
+{% block incident_inspection %}
+
+<section id="incident_inspec" class="section-padding features">
+    <div class="container col-lg-offset-1 col-lg-10">
+
+        <h1>Incident Inspections</h1>
+            <ul class="nav nav-tabs" style="width:85%">
+                <li class="active"><a data-toggle="tab" href="#recTab1">Methodology</a></li>
+                <li ><a data-toggle="tab" href="#recTab2">Recommended PostCodes</a></li>
+                <li><a data-toggle="tab" href="#recTab3">Map Visualization</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="recTab1" class="tab-pane fade in active">
+                    <div class="container col-lg-10 col-md-10">
+                    <h2>Methodology</h2>
+                    <img src="assets/img/inspection/inspection_method.png" style="width:100%" alt="Inspection methodology"/>
+
+                    </div>
+                </div>
+                <div id="recTab2" class="tab-pane fade">
+                <h2>Plots of incident rates in high/low inspection setting</h2>
+                    <p>The bar represents the amount of incident rates with their respective postal codes</p>
+                    <div class = "container col-lg-5">
+                        <img src="assets/img/inspection/high_incident_low_inspection.png" style="width:100%"/>
+                    </div>
+                    <div class = "container col-lg-5">
+                        <img src="assets/img/inspection/low_incident_high_inspection.png" style="width:100%"/>
+                    </div>
+                </div>
+                <div id="recTab3" class="tab-pane fade">
+                <h2>Postcodes Visualization</h2>
+                    <p>The map indicates the locations that incidents related to vegetation have occurred. The yellow-color locations indicate high frequency of incidents.</p>
+                        <iframe src="incident_inspection_map.html" width="90%" height="700" frameBorder="0"></iframe>
+                </div>
+            </div>
+    </div>
+</section>
+{% endblock %}
