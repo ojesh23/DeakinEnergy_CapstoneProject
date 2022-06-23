@@ -1,6 +1,6 @@
 # DeakinEnergy Capstone Project  
 
-Deakin Energy Capstone Project operated for the Energy Safe Victoria, an organization responsible for electrical and gas safety in the state. Electricity distribution businesses reports any electrical network-related incidents to Energy Safe Victoria as port of their regulatory obligations. This project aims to analyze the datasets provided, to see any trends and patterns that lead to these incidents from occuring. 
+Deakin Energy Capstone Project operated for the Energy Safe Victoria, an organization responsible for electrical and gas safety in the state. Electricity distribution businesses reports any electrical network-related incidents to Energy Safe Victoria as part of their regulatory obligations. This project aims to analyze the datasets provided, to see any trends and patterns that lead to these incidents from occuring. 
 
 Using data analysis and machine learning technologies, Deakin Energy team has been able to determine the most influential factors related to network-related incidents, analyze the degree of influence each factors may have to predict an incident from occuring and create predictive model that could classify the incidents based on the data. Our teams prior to implementation of machine learning classifiers, has applied Exploratory Data Analysis to get insights to what our data looks like and visualize them using word clouds, stacked bar charts and various different graphs. This project also demonstrates the ground fire analysis, which has been created using Tableau.
 
